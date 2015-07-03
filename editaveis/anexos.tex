@@ -2,4 +2,66 @@
 
 \partanexos
 
+\chapter[Tabela de Retornos do Verify da OpenSSL]{Tabela de Retornos do Verify da OpenSSL}
+\label{tab:erros}
+ 
+	\begin{table}
+		\centering
+		\begin{longtable}{c>{\em}l}
+		\toprule
+		\textbf{Valor Associado} & \textbf{Retorno} \\ \midrule
+		0 & ok \\ 
+		\rowcolor[gray]{0.9}
+		2 & unable to get issuer certificate \\ 
+		3 & unable to get certificate CRL \\ 
+		\rowcolor[gray]{0.9}
+		4 & unable to decrypt certificate's signature \\ 
+		5 & unable to decrypt CRL's signature \\ 
+		\rowcolor[gray]{0.9}
+		6 & unable to decode issuer public key \\ 
+		7 & certificate signature failure \\ 
+		\rowcolor[gray]{0.9}
+		8 & CRL signature failure \\ 
+		9 & certificate is not yet valid \\ 
+		\rowcolor[gray]{0.9}
+		10 & certificate has expired \\ 
+		11 & CRL is not yet valid \\ 
+		\rowcolor[gray]{0.9}
+		12 & CRL has expired \\ 
+		13 & format error in certificate's notBefore field \\ 
+		\rowcolor[gray]{0.9}
+		14 & format error in certificate's notAfter field \\ 
+		15 & format error in CRL's lastUpdate field \\ 
+		\rowcolor[gray]{0.9}
+		16 & format error in CRL's nextUpdate field \\ 
+		17 & out of memory \\ 
+		\rowcolor[gray]{0.9}
+		18 & self signed certificate \\ 
+		19 & self signed certificate in certificate chain \\ 
+		\rowcolor[gray]{0.9}
+		20 & unable to get local issuer certificate \\ 
+		21 & unable to verify the first certificate \\ 
+		\rowcolor[gray]{0.9}
+		22 & certificate chain too long \\ 
+		23 & certificate revoked \\ 
+		\rowcolor[gray]{0.9}
+		24 & invalid CA certificate \\ 
+		25 & path length constraint exceeded \\ 
+		\rowcolor[gray]{0.9}
+		26 & unsupported certificate purpose \\ 
+		27 & certificate not trusted \\ 
+		\rowcolor[gray]{0.9}
+		28 & certificate rejected \\ 
+		29 & subject issuer mismatch \\ 
+		\rowcolor[gray]{0.9}
+		30 & authority and subject key identifier mismatch \\ 
+		31 & authority and issuer serial number mismatch \\ 
+		\rowcolor[gray]{0.9}
+		32 & key usage does not include certificate signing \\ 
+		50 & application verification failure \\ 
+		\bottomrule
+		\end{longtable}
+	\end{table}
+
+
 \end{anexosenv}

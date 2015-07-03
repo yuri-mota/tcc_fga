@@ -147,9 +147,9 @@
 
 	\begin{figure}[h]
 		\centering
-		\label{img07}
-		\caption{Certificado X.509 \cite[p.~431]{stallings11}}
 		\includegraphics[keepaspectratio=true,scale=0.7]{figuras/img04.eps}
+		\caption{Certificado X.509 \cite[p.~431]{stallings11}}
+		\label{img07}
 	\end{figure}
 
 	E esses certificados \textit{X.509} podem ainda se mostrar de duas formas, em formato \textbf{DER} ou \textbf{PEM}. Quando se encontram em codificação \textit{DER} (\textit{Distinguished Encoding Rules}), esses certificados se apresentam em formato binário, legíveis apenas através dos devidos interpretadores por parte da máquina. Por outro lado, os \textit{PEM} (\textit{Privacy Enhanced Mail}) usam codificação \textbf{ASCII}, facilitando sua interpretação e leitura, assim como a distinção das informações contidas em seu corpo.
@@ -165,73 +165,15 @@
 		\label{fig:img08}
 	\end{figure}
 
-	Entretanto, esses certificados também podem apresentar erros, ou falhas, e comprometer a confiabilidade da troca de informações por diversos fatores, que podem acarretar em quebras de segurança, esses erros são explicitados através de verificações realizadas por ferramentas de geração e análise de certificados digitais (entre outras funções). Na tabela~\ref{tab:table01} vemos os erros identificáveis através da ferrammenta \textbf{OpenSSL}. 
-
-	\begin{center}
-		%\caption{Tabela de Retornos do Comando Verify}
-		%\label{tab:table01}
-		\begin{longtable}{c>{\em}l}
-		\toprule
-		\textbf{Valor Associado} & \textbf{Retorno} \\ \midrule
-		0 & ok \\ 
-		\rowcolor[gray]{0.9}
-		2 & unable to get issuer certificate \\ 
-		3 & unable to get certificate CRL \\ 
-		\rowcolor[gray]{0.9}
-		4 & unable to decrypt certificate's signature \\ 
-		5 & unable to decrypt CRL's signature \\ 
-		\rowcolor[gray]{0.9}
-		6 & unable to decode issuer public key \\ 
-		7 & certificate signature failure \\ 
-		\rowcolor[gray]{0.9}
-		8 & CRL signature failure \\ 
-		9 & certificate is not yet valid \\ 
-		\rowcolor[gray]{0.9}
-		10 & certificate has expired \\ 
-		11 & CRL is not yet valid \\ 
-		\rowcolor[gray]{0.9}
-		12 & CRL has expired \\ 
-		13 & format error in certificate's notBefore field \\ 
-		\rowcolor[gray]{0.9}
-		14 & format error in certificate's notAfter field \\ 
-		15 & format error in CRL's lastUpdate field \\ 
-		\rowcolor[gray]{0.9}
-		16 & format error in CRL's nextUpdate field \\ 
-		17 & out of memory \\ 
-		\rowcolor[gray]{0.9}
-		18 & self signed certificate \\ 
-		19 & self signed certificate in certificate chain \\ 
-		\rowcolor[gray]{0.9}
-		20 & unable to get local issuer certificate \\ 
-		21 & unable to verify the first certificate \\ 
-		\rowcolor[gray]{0.9}
-		22 & certificate chain too long \\ 
-		23 & certificate revoked \\ 
-		\rowcolor[gray]{0.9}
-		24 & invalid CA certificate \\ 
-		25 & path length constraint exceeded \\ 
-		\rowcolor[gray]{0.9}
-		26 & unsupported certificate purpose \\ 
-		27 & certificate not trusted \\ 
-		\rowcolor[gray]{0.9}
-		28 & certificate rejected \\ 
-		29 & subject issuer mismatch \\ 
-		\rowcolor[gray]{0.9}
-		30 & authority and subject key identifier mismatch \\ 
-		31 & authority and issuer serial number mismatch \\ 
-		\rowcolor[gray]{0.9}
-		32 & key usage does not include certificate signing \\ 
-		50 & application verification failure \\ 
-		\bottomrule
-		\end{longtable}
-	\end{center}
+	Entretanto, esses certificados também podem apresentar erros, ou falhas, e comprometer a confiabilidade da troca de informações por diversos fatores, que podem acarretar em quebras de segurança, esses erros são explicitados através de verificações realizadas por ferramentas de geração e análise de certificados digitais (entre outras funções). No anexo~\ref{tab:erros} vemos os erros identificáveis através da ferrammenta \textbf{OpenSSL}. 
 
 	Cada um desses retornos (\textit{com excessão do caso zero}) envolve uma vulnerabilidade de segurança, e se não tratados, certificados que apresentam essas falhas podem representar brechas de segurança. Notemos os Erros 02, 10, 18, e 20.
 
-	O retorno \textbf{02 - unable to get issuer certificate} caracteriza que um ou mais certificados da cadeia não puderam ser encontrados, ou acessados, e por essa razão, não é possível atestar que aquele certificado foi realmente emitido por aquela autoridade.
+	O retorno \textbf{02 - unable to get issuer certificate} caracteriza que um ou mais certificados da cadeia não puderam ser encontrados, ou acessados, e por essa razão, não é possível atestar que aquele certificado foi realmente emitido por aquela autoridade. Se não for possível atestar o emissor de um certificado, não é possível admitir a identidade do indivíduo certificado, abrindo uma brecha na confiabilidade.
 
-	Já o retorno \textbf{10 - certificate has expired} determina que a data de validade do certificado já expirou, e por essa razão o certificado não deve ser considerado válido em datas posteriores.
+	Já o retorno \textbf{10 - certificate has expired} determina que a data de validade do certificado já expirou, e por essa razão o certificado não deve ser considerado válido em datas posteriores. A partir daquela data, não é possível distinguir o real portador daquelas informações, a não ser que o certificado seja renovado.
 
-	No retorno \textbf{18 - self signed certificate} vemos um certificado auto-assinado. Essa situação deveria ser comum, caso o certificado em questão fosse emitido por uma autoridade certificadora do topo de sua cadeia de certificação; entretanto, essa situação não deve ocorrer em outros casos, pois não existe uma relação de confiança para atestar a identidade do indivíduo, a não ser que aquele certificado já fosse conhecido.
+	No retorno \textbf{18 - self signed certificate} vemos um certificado auto-assinado. Essa situação deveria ser comum, caso o certificado em questão fosse emitido por uma autoridade certificadora do topo de sua cadeia de certificação; entretanto, essa situação não deve ocorrer em outros casos, pois não existe uma relação de confiança para atestar a identidade do indivíduo, a não ser que aquele certificado já fosse conhecido. Qualquer um, nesse caso, poderia se passar por outro indivíduo, ou mesmo se passar por uma autoridade certificadora, na falta de referências.
 
 	E o retorno \textbf{20 - unable to get local issuer certificate} mostra que ao recuperar os certificados, alguns dos certificados de emissores podem não coincidir com o que era esperado, ou não podem ser lidos. Por alguma razão, esses certiificados que deveriam ter sido providos/acessados não estão presentes, impedindo que a verificação siga adiante.
+	Nesse caso, se alcança o mesmo impasse visto no \textbf{retorno 02}.

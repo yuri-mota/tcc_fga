@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.30)  3 JUL 2015 19:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.30)  3 JUL 2015 19:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1262,45 +1262,35 @@ Overfull \hbox (12.24359pt too wide) in paragraph at lines 163--164
  []
 
 
-LaTeX Warning: Reference `tab:table01' on page 32 undefined on input line 168.
+Underfull \vbox (badness 2990) has occurred while \output is active []
 
+ [32])
+(./editaveis/consideracoes.tex
+Underfull \vbox (badness 6592) has occurred while \output is active []
 
-Underfull \vbox (badness 10000) detected at line 204
- []
-
-[32] [33]) (./editaveis/consideracoes.tex
+ [33]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [34]
-Underfull \vbox (badness 10000) detected at line 45
- []
-
-
-Underfull \vbox (badness 10000) detected at line 61
- []
-
-[35
+) [34] [35
 
 ]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 79.
- (./codes/FunnyCrawler.java
+nput line 83.
+
+(./codes/FunnyCrawler.java
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1.
  [36]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [37])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [38]
-Overfull \hbox (11.53384pt too wide) in paragraph at lines 84--85
+Overfull \hbox (11.53384pt too wide) in paragraph at lines 88--89
 []\T1/lmr/m/n/12 ``https://www.google.com.br/search?q=sign+in+%2Bhttps&start=''
 + num-ber + ``0''; 
  []
 
-
-Overfull \hbox (10.22685pt too wide) in paragraph at lines 85--86
+[38]
+Overfull \hbox (10.22685pt too wide) in paragraph at lines 89--90
 []\T1/lmr/m/n/12 ``https://www.google.com.br/search?q=register+%2Bhttps&start='
 '+ num-ber + ``0''; 
  []
@@ -1312,23 +1302,19 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41])
+(./codes/LISTA.py
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42]
-(./codes/LISTA.py
-Underfull \vbox (badness 3849) has occurred while \output is active []
+ [42])
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43])
-Overfull \hbox (765.05095pt too wide) in alignment at lines 125--139
- [] [] 
+ [43]
+Overfull \hbox (765.05095pt too wide) in paragraph at lines 132--146
+ [][] 
  []
 
-
-Underfull \vbox (badness 10000) detected at line 139
- []
-
-[44] (./codes/SEPARAR.py
-Underfull \vbox (badness 3849) has occurred while \output is active []
+(./codes/SEPARAR.py [44]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [45]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1339,11 +1325,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [47]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48])
-Underfull \vbox (badness 10000) detected at line 157
- []
+ [48]))
+(./editaveis/textoepostexto.tex [49] [50
 
-[49]) (./editaveis/textoepostexto.tex [50]
+]
 File: figuras/graph01.eps Graphic file (type eps)
  <figuras/graph01.eps>
 Overfull \hbox (148.25375pt too wide) in paragraph at lines 15--16
@@ -1359,9 +1344,7 @@ Overfull \hbox (148.25375pt too wide) in paragraph at lines 26--27
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[51
-
-]
+[51]
 Underfull \vbox (badness 1348) has occurred while \output is active []
 
  [52])
@@ -1385,10 +1368,17 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 [59
 
-] [60])
+] [60]
+Underfull \vbox (badness 10000) detected at line 41
+ []
+
+)
 No file tcc.ind.
 
 AED: lastpage setting LastPage
+[61
+
+] [62]
 \tf@lof=\write6
 \openout6 = `tcc.lof'.
 
@@ -1403,11 +1393,11 @@ Package atveryend Info: Executing hook `AfterLastShipout' on input line 46.
 \BKM@file=\write9
 \openout9 = `tcc.out.ps'.
 
-(./tcc.aux)
+ (./tcc.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 46.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 46.
 Package rerunfilecheck Info: File `tcc.brf' has not changed.
-(rerunfilecheck)             Checksum: 727647B2C89198CDFF3FC5ED837610E1;940.
+(rerunfilecheck)             Checksum: DD20F1DF499C9E06691FF1D9A646A016;940.
 
 
 LaTeX Warning: There were undefined references.
@@ -1418,12 +1408,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
  ) 
 Here is how much of TeX's memory you used:
- 14739 strings out of 493305
- 210058 string characters out of 6139897
- 470675 words of memory out of 5000000
- 17869 multiletter control sequences out of 15000+600000
+ 14743 strings out of 493305
+ 210123 string characters out of 6139897
+ 486484 words of memory out of 5000000
+ 17873 multiletter control sequences out of 15000+600000
  84056 words of font info for 58 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  45i,11n,75p,1544b,2080s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tcc.dvi (62 pages, 310536 bytes).
+Output written on tcc.dvi (64 pages, 314268 bytes).

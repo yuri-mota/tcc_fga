@@ -30,10 +30,13 @@ showstringspaces=false}
 	
 	\section[Ferramentas]{Ferramentas}
 	
-		Para o desenvolvimento deste trabalho de avaliação dos certificados digitais, foi configurado um ambiente com as seguintes especificações apresentadas nas tabelas abaixo.
+		Para o desenvolvimento deste trabalho de avaliação dos certificados digitais, foi configurado um ambiente com as seguintes especificações apresentadas nas tabelas~\ref{tab:hard} e~\ref{tab:soft}.
 		%TABELA xyz HARDWARE UTILIZADO
-		\begin{center}
-			\begin{longtable}{c>{\em}l}
+		\begin{table}[h]
+			\centering
+			\caption{Tabela de Componentes de Hardware}
+			\label{tab:hard}
+			\begin{tabular}{c>{\em}l}
 			\toprule
 			\textbf{Componente} & \textbf{Hardware\/Especificação} \\ \midrule
 			Processador & Intel Core i3-3217U 1.8GHz \\ 
@@ -41,12 +44,14 @@ showstringspaces=false}
 			Memória & 4,00 Gb \\
 			Placa de Rede & Realtek RTL8139/810x Fast Ethernet Adapter \\ 
 			\bottomrule
-			\caption{Tabela de Componentes de Hardware}
-			\end{longtable}
-		\end{center}
+			\end{tabular}
+		\end{table}
 		%TABELA zyx SOFTWARE UTILIZADO
-		\begin{center}
-			\begin{longtable}{c>{\em}l}
+		\begin{table}[h]
+			\centering
+			\caption{Tabela de Softwares Utilizados}
+			\label{tab:soft}
+			\begin{tabular}{c>{\em}l}
 			\toprule
 			\textbf{Software} & \textbf{Versão} \\ \midrule
 			Sistema Operacional & Ubuntu GNOME 12.04 \\ 
@@ -57,9 +62,8 @@ showstringspaces=false}
 			OpenSSL & 1.0.0 \\
 			OpenOffice & 4.0.0 \\
 			\bottomrule
-			\caption{Tabela de Softwares Utilizados}
-			\end{longtable}
-		\end{center}
+			\end{tabular}
+		\end{table}
 		A conexão com a internet é um pré-requisito para a execução do trabalho, para que seja possível a busca de links, e o download dos certificados digitais utilizados em cada um dos domínios identificados, que empregam o protocolo HTTPS em suas vias de acesso. 
 		
 	\section[Aquisição dos Certificados]{Aquisição dos Certificados}
@@ -119,10 +123,13 @@ showstringspaces=false}
 
 		A OpenSSL foi amplamente utilizada no processo de aquisição e verificação dos certificados por permitir, através de suas funções, que a comunicação pela porta 443  fosse feita e que os processos de comunicação pela mesma  fossem estabelecidos. Em um momento posterior, esta mesma biblioteca foi utilizada para permitir a verificação local dos certificados coletados.
 
-		A tabela abaixo apresenta os comandos OpenSSL utilizados para a verificação e validação dos certificados coletados.
+		A tabela~\ref{tab:cmds01} apresenta os comandos OpenSSL utilizados para a verificação e validação dos certificados coletados.
 
-		\begin{center}
-			\begin{longtable}{c>{\em}l}
+		\begin{table}[h]
+			\centering
+			\caption{Tabela de Comandos OpenSSL}
+			\label{tab:cmds01}
+			\begin{tabular}{c>{\em}l}
 			\toprule
 			\textbf{Comando} & \textbf{Descrição} \\ \midrule
 			\$ openssl & O comando básico do OpenSSL. Utilizando esse comando, o sistema sabe que os comandos seguintes pertencem ao OpenSSL. \\ 
@@ -135,27 +142,28 @@ showstringspaces=false}
 			\rowcolor[gray]{0.9}
 			\$ openssl x509 -in certificado\_der -inform der -out certificado\_pem -outform pem & Esse comando lê um certificado em padrão DER e devolve um certificado dentro dos padrões PEM. \\
 			\bottomrule
-			\caption{Tabela de Comandos OpenSSL}
-			\end{longtable}
-		\end{center}
+			\end{tabular}
+		\end{table}
 		Esses comandos, entretanto, não são utilizados diretamente via terminal, estando presentes no corpo dos scripts (quando se fazem necessários) responsáveis por sua execução automatizada. A automatização do processo de verificação se fez necessária pelo tamanho do corpo de certificados que foram coletados para a verificação.
 
 	    Para a validação dos certificados, foi executado o script listado no Código xyz.
 
 	    \lstinputlisting[language=Python,numbers=left,showstringspaces=false,caption=SEPARAR.py,label=SEPARAR]{codes/SEPARAR.py}
-	    O \ref{SEPARAR} foi então o responsável pela verificação dos certificados. Primeiro ele gera  getou dois vetores pareados usando o arquivo gerado pelo \ref{LISTA} e cuja ordem é  foid a mesma da lista gerada por tal script. Uma vez determinados, esses vetores pareados foram verificados utilizando comandos OpenSSL listados abaixo.
+	    O \ref{SEPARAR} foi então o responsável pela verificação dos certificados. Primeiro ele gera  getou dois vetores pareados usando o arquivo gerado pelo \ref{LISTA} e cuja ordem é  foid a mesma da lista gerada por tal script. Uma vez determinados, esses vetores pareados foram verificados utilizando comandos OpenSSL na tabela~\ref{tab:cmds02}.
 
-	    \begin{center}
-			\begin{longtable}{c>{\em}l}
+	    \begin{table}[h]
+			\centering
+			\caption{Tabela de Comandos OpenSSL na Verificação}
+			\label{tab:cmds02}
+			\begin{tabular}{c>{\em}l}
 			\toprule
 			\textbf{Comando} & \textbf{Descrição} \\ \midrule
 			\$ cmdVerify & \$ openssl verify certificado.crt \\ 
 			\rowcolor[gray]{0.9}
 			\$ cmdCAverify & \$ openssl verify -CAfile certificado.root certificado.crt \\
 			\bottomrule
-			\caption{Tabela de Comandos OpenSSL na Verificação}
-			\end{longtable}
-		\end{center}
+			\end{tabular}
+		\end{table}
 	    Através do último script (\ref{SEPARAR}) foi possível gerar um arquivo .csv (comma separated value) com o nome de cada certificado e os resultados de suas avaliações automatizadas. Cada resultado corresponde a um único erro relacionado ao certificado, acusado pela verificação do OpenSSL e extraído automaticamente.
 
     	O resultado do script do Código xyz apresenta,, além do número do erro e de informações relativas ao certificado, qual a natureza do erro apontado, de acordo com a lista de retornos do comando verify do OpenSSL, que podem ser um resultado de verificação positiva ou um dentre os trinta e dois erros previstos de serem encontrados. Estes erros são listados e descritos no Anexo XYZ.
