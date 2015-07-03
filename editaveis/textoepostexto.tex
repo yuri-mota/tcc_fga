@@ -8,24 +8,24 @@
 
 \chapter[Resultados]{Resultados}
 
-	Através da verificação automática feita utilizando a ferramenta OpenSSL, em conjunto com \textit{scrypts}, foram alcançados resultados iniciais. Esses resultados retornaram uma tabela, cujos valores incluem se as verificações encontraram algum erro e qual foi o erro encontrado, além de identificarem em quais certificados foram encontrados cada um dos erros.
+	Através da verificação automática feita utilizando a ferramenta OpenSSL, em conjunto com \textit{scrypts}, foram alcançados resultados, vistos no gráfico~\ref{fig:graph01}. Esses resultados retornaram uma tabela, cujos valores incluem se as verificações encontraram algum erro e qual foi o erro encontrado, além de identificarem em quais certificados foram encontrados cada um dos erros.
 
 	\begin{figure}[h]
 		\centering
-		\caption{Taxa de Ocorrência dos Erros}
-		\label{graph01}
 		\includegraphics[keepaspectratio=true,scale=1]{figuras/graph01.eps}
+		\caption{Taxa de Ocorrência dos Erros}
+		\label{fig:graph01}
 	\end{figure}
 
-	Os números com que os erros se repetiram foram um dos dados extraídos da tabela, que na etapa inicial deste trabalho é baseada na verificação de apenas 799 (setecentos e noventa e nove) certificados digitais. Vale notar, também, que destes certificados verificados, foram considerados certificados de pessoa jurídica em sites de qualquer domínio.
+	Os números com que os erros se repetiram foram um dos dados extraídos da tabela, que se baseia na verificação de 799 (setecentos e noventa e nove) certificados digitais. Vale notar, também, que destes certificados verificados, foram considerados certificados de pessoa jurídica em sites de qualquer domínio.
 
-	Os erros constatados se apresentaram na seguinte proporção:
+	Os erros constatados são apresentados em proporção à suas ocorrências, como visto no gráfico~\ref{fig:graph02}.
 
 	\begin{figure}[h]
 		\centering
-		\caption{Taxa de Erros Relativos}
-		\label{graph02}
 		\includegraphics[keepaspectratio=true,scale=1]{figuras/erRel.eps}
+		\caption{Taxa de Erros Relativos}
+		\label{fig:graph02}
 	\end{figure}
 
 \section[Sem Erro]{Sem Erro}
@@ -34,17 +34,6 @@
 	Os certificados que não apresentaram erros na verificação representam aproximadamente 64,45\% (sessenta e quatro por cento) dos certificados verificados no primeiro momento do trabalho. Esses certificados estão, de acordo com a verificação feita pela ferramenta OpenSSL, de acordo com as exigências dos PKCSs que adotam o padrão x509 como formato final.
 
 \section[Erro 02 - Unable to get issuer Cetificate]{Erro 02 - Unable to get issuer Cetificate}
-
-%	\begin{center}
-%		\begin{longtable}{ll}
-%		\toprule
-%		Certificado & Emissor \\ \midrule
-%		moip.crt & COMODO CA Limited \\
-%		\rowcolor[gray]{0.9}
-%		cryptoparty.crt & COMODO CA Limited \\ \bottomrule
-%		\caption{Tabela de Certificados com Erro 02}
-%		\end{longtable}
-%	\end{center}
 
 	Na documentação da ferramenta OpenSSL, o erro 02 (dois) identifica que a verificação retornou a mensagem: Incapaz de conseguir o certificado do emissor.
 	Esse erro se apresenta quando a cadeia de certificados não está completa na listagem disponível no certificado analisado. O erro 02 (dois) se apresentou em aproximadamente 14\% (quatorze por cento) dos certificados verificados.
