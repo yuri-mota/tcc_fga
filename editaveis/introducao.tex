@@ -1,0 +1,35 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Introdução
+%-Pré-Projeto {TCC/Artigo}
+%Problema
+%Justificativa
+%>Hipótese/Questão/Pergunta
+%Objetivo >Geral >Específico
+%Metodologia
+%Descrever o trabalho em frases < Desenvolvimento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter[Introdução]{Introdução}
+	Certificados digitais são uma forma comum, atualmente, de comprovar a identidade de pessoas, físicas ou jurídicas, em meios digitais. Essa ferramenta de identificação precisa ser robusta, do contrário colocaria em dúvida a confiabilidade do sistema de identificação digital, entretanto, essas falhas existem e dificilmente são tratadas com a devida importância. Para garantir a segurança dos usuários de certificação digital, é necessário expor e identificar tais falhas.
+
+	Pela da exposição das falhas mais comuns entre os certificados digitais avaliados, nesse estudo, realiza-se uma análise acerca de quais fatores levam a essas falhas, se elas podem ser sanadas, e quais as principais implicações ocasionadas pela ocorrência das mesmas.
+
+\section[Objetivo Geral]{Objetivo Geral}
+
+	Este trabalho se foca na identificação, por amostragem em sites que utilizam certificação digital, de quais são as principais exceções de segurança disparadas por certificados digitais utilizados em ambiente real.
+
+\section[Objetivos Específicos]{Objetivos Específicos}
+
+	Por estes mesmos meios, se busca (i)conhecer as estruturas internas dos certificados digitais utilizados em ambiente real; (ii)elucidar formas de contornar exceções de segurança advindas de incoerâncias no corpo de certificados digitais.
+
+\section[Metodologia]{Metodologia}
+	
+	Dentro do padrão X.509, os tipos de erros serão divididos em grupos para que a análise esclareça quais as formas pelas quais esses erros podem se apresentar, e assim seja possível entender a origem e razão de tais erros. Todos os grupos de erros serão originários, e baseados, dos erros encontrados pela verificação realizada com a ferramenta \texttt{OpenSSL}, uma ferramenta aberta utilizada para realizar esse tipo de verificação.
+
+\section[Corpo do Trabalho]{Corpo do Trabalho}
+	
+	Na primeira parte deste trabalho, é apresentada uma introdução à teoria envolvida na criptografia, tendo como foco as razões pelas quais ela se faz necessária, os tipos de ameaças digitais conhecidas, e as medidas tomadas para contornar esses problemas.\\
+	
+	Uma vez que esses detalhes estão esclarecidos, será discutida a forma como a criptografia age para possibilitar a existência, e uso, dos certificados digitais e os algoritmos envolvidos em sua aplicação.\\
+	
+	Essa informação servirá para descrever as características que permeiam os certificados digitais, e que permitem que eles sejam considerados como seguros em um ambiente real de aplicação, onde eles devem carregar informações suficientes para atestar a identidade de um indivíduo, ou grupo, em meio digital.\\

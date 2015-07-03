@@ -1,0 +1,11 @@
+\select@language {brazil}
+\contentsline {figure}{\numberline {1}{\ignorespaces Processo de Encripta\IeC {\c c}\IeC {\~a}o e Decripta\IeC {\c c}\IeC {\~a}o}}{26}{figure.2.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Processo de Encripta\IeC {\c c}\IeC {\~a}o e Desencripta\IeC {\c c}\IeC {\~a}o com Chave Privada}}{27}{figure.2.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Processo de Encripta\IeC {\c c}\IeC {\~a}o em Chave P\IeC {\'u}blica}}{28}{figure.2.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Processo de Desencripta\IeC {\c c}\IeC {\~a}o em Chave P\IeC {\'u}blica}}{28}{figure.2.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Processo de Encripta\IeC {\c c}\IeC {\~a}o do DEA \cite {DEA}}}{29}{figure.2.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Certificado de Chave P\IeC {\'u}blica em Uso \cite [p.~430]{stallings11}}}{31}{figure.2.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Certificado X.509 \cite [p.~431]{stallings11}}}{32}{figure.2.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces \IeC {\'A}rvore Simplificada de Autoridades Certificadoras Brasileiras \cite {itiICPBRASIL}}}{34}{figure.2.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Taxa de Ocorr\IeC {\^e}ncia dos Erros}}{51}{figure.4.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Taxa de Erros Relativos}}{52}{figure.4.10}

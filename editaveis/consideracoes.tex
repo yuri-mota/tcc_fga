@@ -1,0 +1,163 @@
+%##############################################%
+% aspectosgerais < Desenvolvimento             %
+% consideracoes < Metodologia                  %
+% textoepostexto < Resultados                  %
+% elementosdotexto < Conclusão                 %
+%##############################################%
+
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+ 
+\lstset{language=Java,
+basicstyle=\ttfamily,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+numbers=left,
+numberstyle=\tiny\color{black},
+stepnumber=2,
+numbersep=10pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false}
+
+\chapter[Metodologia]{Metodologia}
+	
+	Neste capítulo o objetivo é apresentar as ferramentas e métodos que foram adotados com o objetivo de alcançar resultados significativos para o trabalho. Na primeira parte do capítulo serão apresentadas as ferramentas, e as razões pelas quais foram escolhidas certas tecnologias capazes de auxiliar e facilitar o alcance dos resultados. Em seguida, são apresentados os métodos e scripts gerados, de forma a automatizar e auxiliar o processo de análise dos certificados digitais obtidos.
+	
+	\section[Ferramentas]{Ferramentas}
+	
+		Para o desenvolvimento deste trabalho de avaliação dos certificados digitais, foi configurado um ambiente com as seguintes especificações apresentadas nas tabelas abaixo.
+		%TABELA xyz HARDWARE UTILIZADO
+		\begin{center}
+			\begin{longtable}{c>{\em}l}
+			\toprule
+			\textbf{Componente} & \textbf{Hardware\/Especificação} \\ \midrule
+			Processador & Intel Core i3-3217U 1.8GHz \\ 
+			\rowcolor[gray]{0.9}
+			Memória & 4,00 Gb \\
+			Placa de Rede & Realtek RTL8139/810x Fast Ethernet Adapter \\ 
+			\bottomrule
+			\caption{Tabela de Componentes de Hardware}
+			\end{longtable}
+		\end{center}
+		%TABELA zyx SOFTWARE UTILIZADO
+		\begin{center}
+			\begin{longtable}{c>{\em}l}
+			\toprule
+			\textbf{Software} & \textbf{Versão} \\ \midrule
+			Sistema Operacional & Ubuntu GNOME 12.04 \\ 
+			\rowcolor[gray]{0.9}
+			Python & 3.4.3 \\
+			Java VM & OpenJDK 1.7 \\
+			\rowcolor[gray]{0.9}
+			OpenSSL & 1.0.0 \\
+			OpenOffice & 4.0.0 \\
+			\bottomrule
+			\caption{Tabela de Softwares Utilizados}
+			\end{longtable}
+		\end{center}
+		A conexão com a internet é um pré-requisito para a execução do trabalho, para que seja possível a busca de links, e o download dos certificados digitais utilizados em cada um dos domínios identificados, que empregam o protocolo HTTPS em suas vias de acesso. 
+		
+	\section[Aquisição dos Certificados]{Aquisição dos Certificados}
+	
+		Para a coleta dos certificados são utilizadas duas etapas bem definidas:
+		
+		\begin{enumerate}
+			\item A coleta da URL de sites que apresentem o protocolo HTTPS;
+			\item O download dos certificados através de comunicação via porta 443;
+		\end{enumerate}
+
+		Os certificados digitais  identificados foram adquiridos através de comunicação com a porta 443, padrão utilizado no protocolo HTTPS para a requisição e comunicação de segurança. O processo de handshake foi ignorado durante a aquisição dos certificados, de modo a evitar que certificados que apresentam erros sejam descartados durante a coleta. Esta escolha permitiu que todos os certificados fossem avaliados da mesma forma, posteriormente, pelo OpenSSL.
+		
+		Os passos definidos foram executados através de scripts. Todos os scripts desenvolvidos e/ou utilizados neste trabalho realizam tarefas bem definidas, e devem ser  executados na ordem descrita para seu devido funcionamento. O primeiro script a ser executado é apresentado no Código \ref{MKYONG}.
+		
+		%CODIGO mkyong.java
+		\lstinputlisting[language=Java,numbers=left,showstringspaces=false,caption=FunnyCrawler.java,label=MKYONG]{codes/FunnyCrawler.java}
+		O \ref{MKYONG} foi escrito a partir de um tutorial da ferramenta JSON, da plataforma Java, disponibilizado na internet \cite{mkyong_url}. Sua função é analisar os resultados de uma pesquisa Google e retornar os links disponibilizados pela mesma na forma de um conjunto (SET). As seguintes strings de busca foram utilizadas:
+		
+		\begin{itemize}
+			\item \lq\lq https://www.google.com.br/search?q=login+\%2Bhttps\&start=\rq\rq + number + \lq\lq0\rq\rq;
+			\item \lq\lq https://www.google.com.br/search?q=sign+in+\%2Bhttps\&start=\rq\rq + number + \lq\lq0\rq\rq;
+			\item \lq\lq https://www.google.com.br/search?q=register+\%2Bhttps\&start=\rq\rq + number + \lq\lq0\rq\rq;
+			\item \lq\lq https://www.google.com.br/search?q=\%2Bhttps\&start=\rq\rq + number + \lq\lq0\rq\rq;
+			\item \lq\lq https://www.google.com.br/search?q=buy\%2Bhttps\&start=\rq\rq + number + \lq\lq0\rq\rq.
+		\end{itemize}
+		* - O parâmetro “number” é utilizado para a navegação em diferentes páginas, durante a busca.
+		
+		Os retornos, no caso links para resultados das buscas, foram direcionados para um arquivo de texto (UTF-8), onde os links são colocados de forma que cada link ocupa uma única linha do arquivo.\\
+		\textit{“...\\
+		www.wpbeginner.com\\
+		www.wpwhitesecurity.com\\
+		stackoverflow.com\\
+		en.support.wordpress.com\\
+		security.stackexchange.com\\
+		github.com\\
+		webcache.googleusercontent.com\\
+		…”}
+	
+		Utilizando a lista de links que foi organizada, o script \ref{DOWNLOAD} inicia conexões via porta 443 utilizando o OpenSSL e recuperando os certificados, quando existentes, salvando localmente uma cópia .pem do certificado que foi tocado durante o processo de comunicação.
+		
+		%CODIGO DOWNLOAD.py
+		\lstinputlisting[language=Python,numbers=left,showstringspaces=false,caption=DOWNLOAD.py,label=DOWNLOAD]{codes/DOWNLOAD.py}
+		Nesse momento, os certificados salvos localmente estão prontos para a análise posterior. Porém, os certificados não são baixados com todas sua cadeia de certificação, em alguns dos casos, e por conta disso o certificado digital do seu emissor, a CA, preciso ser copiado localmente, para evitar falso-positivos entre os resultados.
+		
+		Para solucionar essa falta, se utiliza o seguinte script.
+		
+		\lstinputlisting[language=Python,numbers=left,showstringspaces=false,caption=LOAD\_ROOT.py,label=LOAD_ROOT]{codes/LOAD_ROOT.py}
+		No \ref{LOAD_ROOT}, a função download\_root() realiza todo o trabalho de acessar o conteúdo textual de um certificado, separá-lo em tokens, e  a partir desses tokens extrair o endereço para download do certificado do emissor. Uma vez com o certificado do emissor em mãos, esse certificado é tratado e passado do formato DER para o formato PEM, e esse novo arquivo PEM tem sua extensão definida, para fins de controle, como .root.
+		
+		Uma vez recuperados os certificados dos emissores, foi executado o script apresentado no \ref{LISTA}, com a finalidade de listar quais certificados possuem o certificado da CA armazenado localmente.
+
+		\lstinputlisting[language=Python,numbers=left,showstringspaces=false,caption=LISTA.py,label=LISTA]{codes/LISTA.py}
+		A função do  script Código xyz é pegar todos os arquivos .pem presentes no mesmo diretório que ele e pesquisar se para eles existe um arquivo .root associado. O script então gera uma lista pareada de .pem's e .root's na qual, caso não haja um par, o .pem será pareado com um hífen ( - ), para identificação dos arquivos sem .root quando for feita a verificação dos certificados.
+
+		\section[Validação dos Certificados]{Validação dos Certificados}
+
+		A OpenSSL foi amplamente utilizada no processo de aquisição e verificação dos certificados por permitir, através de suas funções, que a comunicação pela porta 443  fosse feita e que os processos de comunicação pela mesma  fossem estabelecidos. Em um momento posterior, esta mesma biblioteca foi utilizada para permitir a verificação local dos certificados coletados.
+
+		A tabela abaixo apresenta os comandos OpenSSL utilizados para a verificação e validação dos certificados coletados.
+
+		\begin{center}
+			\begin{longtable}{c>{\em}l}
+			\toprule
+			\textbf{Comando} & \textbf{Descrição} \\ \midrule
+			\$ openssl & O comando básico do OpenSSL. Utilizando esse comando, o sistema sabe que os comandos seguintes pertencem ao OpenSSL. \\ 
+			\rowcolor[gray]{0.9}
+			\$ openssl verify certificado & Dentro do OpenSSL, o comando verify é utilizado para realizar verificações no certificado passado nos parâmetros. Pode haver flags junto ao comando. \\
+			\$ openssl verify -CAfile root certificado & A flag -CAfile é utilizada quando o certificado root do emissor se encontra no mesmo diretório do certificado a ser verificado. \\
+			\rowcolor[gray]{0.9}
+			\$ openssl x509 certificado & Esse comando é utilizado para ler certificados no padrão x509. Pode haver flags junto ao comando. \\
+			\$ openssl x509 -in certificado -text & Abre um certificado no padrão x509 e retorna o conteúdo do mesmo em formato de texto. \\
+			\rowcolor[gray]{0.9}
+			\$ openssl x509 -in certificado\_der -inform der -out certificado\_pem -outform pem & Esse comando lê um certificado em padrão DER e devolve um certificado dentro dos padrões PEM. \\
+			\bottomrule
+			\caption{Tabela de Comandos OpenSSL}
+			\end{longtable}
+		\end{center}
+		Esses comandos, entretanto, não são utilizados diretamente via terminal, estando presentes no corpo dos scripts (quando se fazem necessários) responsáveis por sua execução automatizada. A automatização do processo de verificação se fez necessária pelo tamanho do corpo de certificados que foram coletados para a verificação.
+
+	    Para a validação dos certificados, foi executado o script listado no Código xyz.
+
+	    \lstinputlisting[language=Python,numbers=left,showstringspaces=false,caption=SEPARAR.py,label=SEPARAR]{codes/SEPARAR.py}
+	    O \ref{SEPARAR} foi então o responsável pela verificação dos certificados. Primeiro ele gera  getou dois vetores pareados usando o arquivo gerado pelo \ref{LISTA} e cuja ordem é  foid a mesma da lista gerada por tal script. Uma vez determinados, esses vetores pareados foram verificados utilizando comandos OpenSSL listados abaixo.
+
+	    \begin{center}
+			\begin{longtable}{c>{\em}l}
+			\toprule
+			\textbf{Comando} & \textbf{Descrição} \\ \midrule
+			\$ cmdVerify & \$ openssl verify certificado.crt \\ 
+			\rowcolor[gray]{0.9}
+			\$ cmdCAverify & \$ openssl verify -CAfile certificado.root certificado.crt \\
+			\bottomrule
+			\caption{Tabela de Comandos OpenSSL na Verificação}
+			\end{longtable}
+		\end{center}
+	    Através do último script (\ref{SEPARAR}) foi possível gerar um arquivo .csv (comma separated value) com o nome de cada certificado e os resultados de suas avaliações automatizadas. Cada resultado corresponde a um único erro relacionado ao certificado, acusado pela verificação do OpenSSL e extraído automaticamente.
+
+    	O resultado do script do Código xyz apresenta,, além do número do erro e de informações relativas ao certificado, qual a natureza do erro apontado, de acordo com a lista de retornos do comando verify do OpenSSL, que podem ser um resultado de verificação positiva ou um dentre os trinta e dois erros previstos de serem encontrados. Estes erros são listados e descritos no Anexo XYZ.
+
+    	No próprio arquivo .csv resultante foi utilizada a função SUMIF(), nativa da ferramenta OpenOffice Math, que adiciona termos ao somatório quando estes atendem a condição especificada dentro de seus parâmetros.

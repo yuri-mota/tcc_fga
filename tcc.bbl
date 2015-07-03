@@ -1,0 +1,51 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.2 }
+
+\bibitem[Crypto 2005]{DEA}
+\abntrefinfo{Crypto}{CRYPTO}{2005}
+{CRYPTO, M. \emph{{https://en.wikipedia.org/wiki/FILE:DES-main-network.png}}.
+  [S.l.]: Matt Crypto, 2005.}
+
+\bibitem[ITI 2015]{itiICPBRASIL}
+\abntrefinfo{ITI}{ITI}{2015}
+{ITI. \emph{{www.iti.gov.br/icp-brasil/estrutura}}. [S.l.]: Instituto Nacional
+  de Tecnologia da Informação, 2015.}
+
+\bibitem[RSA 1993]{pkcs8}
+\abntrefinfo{RSA}{RSA}{1993}
+{RSA, L. Pkcs \#8 private key information syntax standard.
+Redwood City, CA, 1993.}
+
+\bibitem[RSA 2000]{pkcs10}
+\abntrefinfo{RSA}{RSA}{2000}
+{RSA, L. Pkcs \#10 certification request syntax standard.
+Bedford, MA, 2000.}
+
+\bibitem[RSA 2012]{pkcs1}
+\abntrefinfo{RSA}{RSA}{2012}
+{RSA, L. Pkcs \#1 rsa cryptography standard.
+Cambridge, MA, 2012.}
+
+\bibitem[Schneier 1996]{schneier96}
+\abntrefinfo{Schneier}{SCHNEIER}{1996}
+{SCHNEIER, B. \emph{Applied cryptography\: protocols, algorithms, and source
+  code in C}. [S.l.]: Wiley, 1996.
+ISBN 9780471128458.}
+
+\bibitem[Stallings 2011]{stallings11}
+\abntrefinfo{Stallings}{STALLINGS}{2011}
+{STALLINGS, W. \emph{Cryptography and Network Security: Principles and
+  Practice}. [S.l.]: Prentice Hall, 2011.
+ISBN 9780136097044.}
+
+\bibitem[Yong 2015]{mkyong_url}
+\abntrefinfo{Yong}{YONG}{2015}
+{YONG, M.~K.
+  \emph{{http://www.mkyong.com/java/jsoup-send-search-query-to-google/}}.
+  [S.l.]: mkyong, 2015.}
+
+\end{thebibliography}

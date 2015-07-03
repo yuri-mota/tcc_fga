@@ -1,0 +1,100 @@
+20 & unable to get local issuer certificate & sisac.crt & ICP-Brasil \\ \hline
+20 & unable to get local issuer certificate & midiaweb.crt & ICP-Brasil \\ \hline
+20 & unable to get local issuer certificate & airbnb.crt & GlobalSign nv-sa \\ \hline
+1 & ok & netcerto.crt & AlphaSSL \\ \hline
+1 & ok & voepassaredo.crt & Thawte \\ \hline
+1 & ok & dpcmar.crt & VeriSign \\ \hline
+20 & unable to get local issuer certificate & convenios.crt & ICP-Brasil \\ \hline
+20 & unable to get local issuer certificate & graacc.crt & Entrust \\ \hline
+1 & ok & fao.crt & TrustSign Certificadora Digital \\ \hline
+1 & ok & face.crt & DigiCert Inc \\ \hline
+1 & ok & fnac.crt & VeriSign \\ \hline
+20 & unable to get local issuer certificate & sinesp.crt & ICP-Brasil \\ \hline
+1 & ok & westwing.crt & GeoTrust \\ \hline
+1 & ok & bancBR.crt & VeriSign \\ \hline
+20 & unable to get local issuer certificate & gestaosecom.crt & ICP-Brasil \\ \hline
+2 & unable to get issuer certificate & moip.crt & COMODO CA Limited \\ \hline
+20 & unable to get local issuer certificate & serpro_acess.crt & ICP-Brasil \\ \hline
+1 & ok & eleicoeslimpas.crt & StartCom Ltd. \\ \hline
+18 & self signed certificate & saeweb.crt & Universidade de Brasilia \\ \hline
+10 & certificate has expired & unijui.crt & AlphaSSL \\ \hline
+18 & self signed certificate & mat_web.crt & Universidade de Brasilia \\ \hline
+20 & unable to get local issuer certificate & mercadobitcoin.crt & GlobalSign nv-sa \\ \hline
+20 & unable to get local issuer certificate & spiu.crt & ICP-Brasil \\ \hline
+20 & unable to get local issuer certificate & mastercard.crt & Entrust \\ \hline
+1 & ok & uff.crt & VeriSign \\ \hline
+1 & ok & ensinomarmil.crt & VeriSign \\ \hline
+1 & ok & senasp.crt & COMODO CA Limited \\ \hline
+1 & ok & capes.crt & StartCom Ltd. \\ \hline
+1 & ok & ona.crt & Starfield Technologies \\ \hline
+20 & unable to get local issuer certificate & coursera.crt & GoDaddy.com \\ \hline
+20 & unable to get local issuer certificate & polfed.crt & ICP-Brasil \\ \hline
+1 & ok & bcash.crt & Thawte \\ \hline
+1 & ok & spNFE.crt & VeriSign \\ \hline
+2 & unable to get issuer certificate & cryptoparty.crt & COMODO CA Limited \\ \hline
+1 & ok & brandsclub.crt & COMODO CA Limited \\ \hline
+20 & unable to get local issuer certificate & benepe.crt & ICP-Brasil \\ \hline
+1 & ok & linkedin.crt & DigiCert Inc \\ \hline
+20 & unable to get local issuer certificate & brb.crt & ICP-Brasil \\ \hline
+1 & ok & funcefet.crt & COMODO CA Limited \\ \hline
+1 & ok & notPesFis.crt & VeriSign \\ \hline
+20 & unable to get local issuer certificate & eucatur.crt & Site Blindado S.A. \\ \hline
+20 & unable to get local issuer certificate & br.credit-suisse.crt & Trustwave Holdings \\ \hline
+20 & unable to get local issuer certificate & legisl.crt & ICP-Brasil \\ \hline
+1 & ok & centraldoseventos.crt & GeoTrust \\ \hline
+1 & ok & ticket360.crt & Thawte \\ \hline
+1 & ok & coelce.crt & VeriSign \\ \hline
+10 & certificate has expired & figest.crt & Secretaria do Patrimo\xC3\xB4nio da Uni\xC3\xA3o \\ \hline
+20 & unable to get local issuer certificate & santandernet.crt & Entrust \\ \hline
+1 & ok & googlemaps.crt & Google Inc \\ \hline
+1 & ok & cadNacProd.crt & VeriSign \\ \hline
+1 & ok & ticketbrasil.crt & GeoTrust \\ \hline
+1 & ok & usp.crt & GlobalSign nv-sa \\ \hline
+10 & certificate has expired & agorainvest.crt & VeriSign \\ \hline
+20 & unable to get local issuer certificate & notacariocario.crt & Thawte \\ \hline
+20 & unable to get local issuer certificate & cadProgSoc.crt & ICP-Brasil \\ \hline
+1 & ok & tesourodiretobmfbovespa.crt & VeriSign \\ \hline
+20 & unable to get local issuer certificate & scedv.crt & ICP-Brasil \\ \hline
+1 & ok & usvisa.crt & GeoTrust \\ \hline
+1 & ok & unasusufsc.crt & AlphaSSL \\ \hline
+1 & ok & msconcursos.crt & GeoTrust \\ \hline
+1 & ok & organizze.crt & COMODO CA Limited \\ \hline
+1 & ok & visa.crt & GeoTrust \\ \hline
+1 & ok & itau.crt & COMODO CA Limited \\ \hline
+1 & ok & petros.crt & COMODO CA Limited \\ \hline
+1 & ok & pagSeg.crt & VeriSign \\ \hline
+1 & ok & pastoraldacrianca.crt & StartCom Ltd. \\ \hline
+20 & unable to get local issuer certificate & scdp.crt & ICP-Brasil \\ \hline
+1 & ok & ufmg.crt & GoDaddy.com \\ \hline
+18 & self signed certificate & mailufsc.crt & COPERVE \\ \hline
+20 & unable to get local issuer certificate & sipec.crt & ICP-Brasil \\ \hline
+20 & unable to get local issuer certificate & fndegov.crt & ICP-Brasil \\ \hline
+20 & unable to get local issuer certificate & recFed.crt & ICP-Brasil \\ \hline
+18 & self signed certificate & unbdoc.crt & Universidade de Brasilia \\ \hline
+1 & ok & ibama.crt & COMODO CA Limited \\ \hline
+20 & unable to get local issuer certificate & servicos.crt & ICP-Brasil \\ \hline
+20 & unable to get local issuer certificate & portaldoservidorMG.crt & ICP-Brasil \\ \hline
+10 & certificate has expired & cnpq.crt & StartCom Ltd. \\ \hline
+20 & unable to get local issuer certificate & portoseguro.crt & Site Blindado S.A. \\ \hline
+1 & ok & ufla.crt & GlobalSign nv-sa \\ \hline
+1 & ok & mongeralaegon.crt & TrustSign Certificadora Digital \\ \hline
+1 & ok & rs21.crt & GeoTrust \\ \hline
+20 & unable to get local issuer certificate & prevSoc.crt & ICP-Brasil \\ \hline
+1 & ok & hdi.crt & VeriSign \\ \hline
+20 & unable to get local issuer certificate & gravatar.crt & GoDaddy.com \\ \hline
+10 & certificate has expired & pdt_planej.crt & Secretaria do Patrimo\xC3\xB4nio da Uni\xC3\xA3o \\ \hline
+20 & unable to get local issuer certificate & caixa.crt & ICP-Brasil \\ \hline
+1 & ok & me.crt & VeriSign \\ \hline
+1 & ok & oab.crt & VeriSign \\ \hline
+1 & ok & incapsula.crt & COMODO CA Limited \\ \hline
+1 & ok & emec.crt & COMODO CA Limited \\ \hline
+1 & ok & marinha.crt & VeriSign \\ \hline
+1 & ok & vagas.crt & COMODO CA Limited \\ \hline
+20 & unable to get local issuer certificate & serpro.crt & ICP-Brasil \\ \hline
+20 & unable to get local issuer certificate & abril.crt & Entrust \\ \hline
+20 & unable to get local issuer certificate & cnj.crt & ICP-Brasil \\ \hline
+1 & ok & cbmdf.crt & GeoTrust \\ \hline
+1 & ok & mercadopago.crt & GeoTrust Inc \\ \hline
+20 & unable to get local issuer certificate & siape_net.crt & ICP-Brasil \\ \hline
+1 & ok & escrevendoofuturo.crt & Network Solutions L.L.C. \\ \hline
+1 & ok & webmailuerj.crt & StartCom Ltd. \\ \hline
