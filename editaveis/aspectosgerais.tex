@@ -27,7 +27,7 @@
 		\item \textbf{Não-Repudiação} - Um remetente não deve ser capaz de negar falsamente o envio de uma mensagem.
 	\end{itemize}
 
-	Os indivíduos de nosso exemplo serão, figurativamente, chamados de \textit{A} e \textit{B}, e suas mensagens serão chamadas de \textit{mA} e \textit{mB}, respectivamente. Chamando a mensagem original, \textit{mA}, de \textbf{texto plano}, ela pode ser alterada através de \textit{encriptação} para gerar um \textbf{texto cifrado}, \textit{enA}, e retornará ao seu estado original passando por uma \textit{desencriptação} \cite[p.~15]{schneier96}, como vemos na figura~\ref{fig:img01}.
+	Os indivíduos de nosso exemplo serão, figurativamente, chamados de \textit{A} e \textit{B}, e suas mensagens serão chamadas de \textit{mA} e \textit{mB}, respectivamente. Chamando a mensagem original, \textit{mA}, de \textbf{texto plano}, ela pode ser alterada através de \textit{encriptação} para gerar um \textbf{texto cifrado}, \textit{enA}, e retornará ao seu estado original passando por uma \textit{desencriptação} \cite[p.~15]{schneier96}, como vemos na Figura~\ref{fig:img01}.
 
 	\begin{figure}[h]
 		\centering
@@ -59,7 +59,7 @@
 
 	Existem duas formas mais populares de se tratar com chaves de segurança, mantendo-as em segredo (\textit{chaves secretas ou privadas}), na \textbf{criptografia de chave simétrica}, ou tornando-as acessíveis (\textit{chaves públicas}) em par com chaves privadas, na \textbf{criptografia de chave assimétrica}. Cada um dos casos apresenta suas próprias vantagens, e desvantagens, sendo possível trabalhar com ambos objetivando uma troca segura de informações.
 	
-	Nos algoritmos de chave privada, a chave é compartilhada pelos envolvidos na troca de informações. Utilizando de um mesmo algoritmo conhecido, eles irão enviar suas mensagens, e recebê-las, utilizando uma mesma chave secreta para o processo de encriptar e \textit{desencriptar} as informações trocadas, como visto na figura~\ref{fig:img02}. Na atualidade, é comum que essas chaves privadas sejam monitoradas por \textbf{KDCs} (\textit{Key Distribution Centers}), \textbf{Centros de Distribuição de Chaves}, afim de arbitrar a distribuição e consenso em relação à chave utilizada em uma troca.
+	Nos algoritmos de chave privada, a chave é compartilhada pelos envolvidos na troca de informações. Utilizando de um mesmo algoritmo conhecido, eles irão enviar suas mensagens, e recebê-las, utilizando uma mesma chave secreta para o processo de encriptar e \textit{desencriptar} as informações trocadas, como visto na Figura~\ref{fig:img02}. Na atualidade, é comum que essas chaves privadas sejam monitoradas por \textbf{KDCs} (\textit{Key Distribution Centers}), \textbf{Centros de Distribuição de Chaves}, afim de arbitrar a distribuição e consenso em relação à chave utilizada em uma troca.
 
 	\begin{figure}[h]
 		\centering
@@ -68,7 +68,7 @@
 		\label{fig:img02}
 	\end{figure}
 
-	Já os algoritmos de chave pública seguem uma ideia diferente, existe uma chave conhecida publicamente e uma chave secreta, idealmente conhecida apenas pelo usuário. Através da encriptação utilizando a chave pública de um indivíduo, exemplo na figura~\ref{fig:img03}, os algoritmos de chave assimétrica irão garantir que apenas a chave privada do indivíduo seja capaz de desencriptar a mensagem, visto na figura~\ref{fig:img04}. Da mesma forma, utilizar a própria chave privada para encriptar um conteúdo irá garantir que apenas a chave pública seja utilizada para desencriptar corretamente aquela mensagem, atestando a origem daquela mensagem.
+	Já os algoritmos de chave pública seguem uma ideia diferente, existe uma chave conhecida publicamente e uma chave secreta, idealmente conhecida apenas pelo usuário. Através da encriptação utilizando a chave pública de um indivíduo, exemplo na Figura~\ref{fig:img03}, os algoritmos de chave assimétrica irão garantir que apenas a chave privada do indivíduo seja capaz de desencriptar a mensagem, visto na Figura~\ref{fig:img04}. Da mesma forma, utilizar a própria chave privada para encriptar um conteúdo irá garantir que apenas a chave pública seja utilizada para desencriptar corretamente aquela mensagem, atestando a origem daquela mensagem.
 
 	\begin{figure}[!ht]
 		\centering
@@ -84,11 +84,11 @@
 		\label{fig:img04}
 	\end{figure}
 
-	Nesse contexto, a encriptação com a própria chave privada serviria como meio de assinar um conteúdo, ainda no contexto da figura~\ref{fig:img03}, de forma a garantir a autenticidade e a não-repudiação. Em se tratando de uma comunicação verdadeiramente séria, é possível empregar mais de uma encriptação, com o objetivo de garantir que um conteúdo seja lido apenas pelo destinatário, e que seja provada a identidade do remetente.
+	Nesse contexto, a encriptação com a própria chave privada serviria como meio de assinar um conteúdo, ainda no contexto da Figura~\ref{fig:img03}, de forma a garantir a autenticidade e a não-repudiação. Em se tratando de uma comunicação verdadeiramente séria, é possível empregar mais de uma encriptação, com o objetivo de garantir que um conteúdo seja lido apenas pelo destinatário, e que seja provada a identidade do remetente.
 	
 	Entretanto, para garantir  que essas trocas sejam feitas, e que haja consenso em como encriptar e desencriptar essas informações, é necessário que os algoritmos utilizados no processo sejam conhecidos por ambas as partes. Diferente de algoritmos que se tornam seguros através do segredo do algoritmo em si, algoritmos que utilizam chaves, geralmente, tem sua segurança embasada nas chaves em si, sendo os algoritmos públicos. Historicamente, existem diversos algoritmos de criptografia conhecidos e utilizados, vale citar dois desses algoritmos: o DES e o RSA.
 	
-	Um dos primeiros algoritmos utilizados em larga escala, o DES (Data Encryption Standard) na verdade se trata de um padrão, detentor do algoritmo DEA (Data Encryption Algorithm). Em seu funcionamento, esse algoritmo adota a Função de Feistel, que realiza a encriptação através de quatro estágios. A função-F (como é conhecida a função de Feistel) é repetida diversas vezes dentro do algoritmo, observado na figura~\ref{fig:img05}, de forma que ao final de diversas repetições será alcançado o texto cifrado.
+	Um dos primeiros algoritmos utilizados em larga escala, o DES (Data Encryption Standard) na verdade se trata de um padrão, detentor do algoritmo DEA (Data Encryption Algorithm). Em seu funcionamento, esse algoritmo adota a Função de Feistel, que realiza a encriptação através de quatro estágios. A função-F (como é conhecida a função de Feistel) é repetida diversas vezes dentro do algoritmo, observado na Figura~\ref{fig:img05}, de forma que ao final de diversas repetições será alcançado o texto cifrado.
 	
 	\begin{figure}[!ht]
 		\centering
@@ -100,18 +100,18 @@
 	Já o RSA, nomeado assim em referência aos seus criadores, é utilizado para a encriptação utilizando chaves assimétricas. Seu funcionamento difere, pois certas formalidades são exigidas para gerar as chaves a serem utilizadas nesse algoritmo. As chaves utilizadas dependem de dois números primos grandes (o que matematicamente diminui as chances de uma quebra de segurança) que irão ser utilizados em sua geração, que se dá de forma que:
 	
 	\begin{enumerate}
-		\item Dois números primos grandes \textbf{p} e \textbf{q}, são escolhidos;
-		\item É calculado $\textbf{n} = pq$;
-		\item Utiliza-se a função-$\varphi$ onde $n: \varphi(n) = (p-1)(q-1)$;
+		\item Dois números primos grandes \textit{p} e \textit{q}, são escolhidos;
+		\item É calculado $n \equiv pq$;
+		\item Utiliza-se a função-$\varphi$ onde $n: \varphi(n) \equiv (p-1)(q-1)$;
 		\item É escolhido um valor \textbf{e} (inteiro) maior que 1 e menor que $\varphi(n)$, de forma que \textit{e} e $\varphi(n)$ sejam primos entre si.
-		\item Calcula-se \textbf{d} como inverso multiplicativo de \textit{e}, onde mod($\varphi(n)$)
+		\item Calcula-se \textit{d} como inverso multiplicativo de \textit{e}, onde $\bmod{\varphi(n)}$
 	\end{enumerate}
 	
 	Assim gerando uma chave pública através do par \textit{(e, n)}, e uma chave privada do conjunto \textit{(p, q, d)} ou apenas \textit{(d)}, o segundo caso sendo uma abordagem mais lenta, pois o desencriptador não conhece os primos originais. A encriptação e desencriptação se dão, respectivamente, pelas fórmulas: \textit{(onde m é o texto plano, e c é o texto cifrado)}
 	
 	\begin{enumerate}
-		\item $c = m^e mod n$
-		\item $m = c^d mod n$
+		\item $c = m^e \bmod{n}$
+		\item $m = c^d \bmod{n}$
 	\end{enumerate}
 	
 	Existem muitos algoritmos de cifração de chave pública, porém a maioria é impraticável por questões de desempenho. É importante notar que a complexidade envolvida nesses algoritmos desse tipo se deve a existência da própria chave pública, pois os procedimentos envolvidos para gerá-la não são simples, nem mais eficientes que algoritmos simétricos \cite{stallings11}. Para se trabalhar com esse tipo de sistema, é necessário que o algoritmo e a chave pública não sejam suficientes para descobrir a chave privada \cite{pkcs8}. Essa mesma capacidade de gerar chaves públicas em par com chaves privadas permite que algoritmos assimétricos gerem um texto cifrado a partir de um texto plano usando uma chave pública, e que a chave privada seja a única capaz de decifrar aquele texto cifrado gerado \cite{pkcs1}.
@@ -134,7 +134,7 @@
 
 	Em suma, o que o autor diz é que a forma mais simples de atestar a identidade de uma pessoa é utilizando um \textbf{certificado de chave pública}. Pensando numa situação onde aparecem os indivíduos \textbf{A}, \textbf{B}, e \textbf{C}, um certificado apresenta várias informações sobre um \textit{indivíduo A}, e é assinado por um \textit{indivíduo C} externo, para que o \textit{indivíduo B} passe a confiar no \textit{indivíduo A}. Para que esse certificado seja confiável e válido, é necessário que o \textit{indivíduo A} e o \textit{indivíduo B} confiem no \textit{indivíduo C}. No caso o indivíduo C seria então conhecido como uma \textbf{Autoridade Certificadora}.
 
-	Para que esses certificados possam seguir um padrão, foram criados os \textbf{Public-Key Cryptography Standards}, ou \textit{PKCS}, e dentre elas, especificamente a \textit{PKCS \#10} \cite{pkcs10}, cujo objetivo é padronizar os dados contidos em \textit{certificados digitais}, assim como definir quais tipos de informações devem estar contidas em um \textit{certificado digital} e o modelo que deve ser seguido para se requisitar um. O certificado é construído como se observa na figura~\ref{fig:img06}:
+	Para que esses certificados possam seguir um padrão, foram criados os \textbf{Public-Key Cryptography Standards}, ou \textit{PKCS}, e dentre elas, especificamente a \textit{PKCS \#10} \cite{pkcs10}, cujo objetivo é padronizar os dados contidos em \textit{certificados digitais}, assim como definir quais tipos de informações devem estar contidas em um \textit{certificado digital} e o modelo que deve ser seguido para se requisitar um. O certificado é construído como se observa na Figura~\ref{fig:img06}:
 
 	\begin{figure}[h]
 		\centering
@@ -143,7 +143,7 @@
 		\label{fig:img06}
 	\end{figure}
  
-	Esses certificados utilizam o padrão \textbf{X.509}. O \textit{X.509} não dita um \textit{cipher} específico, entretanto ele aconselha que seja utilizado o \textit{RSA} para a implementação da \textit{criptografia de chave pública} e das \textit{assinaturas digitais}. Na figura~\ref{fig:img07}, abaixo, se observa a estrutura de um certificado:
+	Esses certificados utilizam o padrão \textbf{X.509}. O \textit{X.509} não dita um \textit{cipher} específico, entretanto ele aconselha que seja utilizado o \textit{RSA} para a implementação da \textit{criptografia de chave pública} e das \textit{assinaturas digitais}. Na Figura~\ref{fig:img07} é possível observar a estrutura de um certificado:
 
 	\begin{figure}[h]
 		\centering
@@ -156,7 +156,7 @@
 
 	Como já foi dito, a ideia de um certificado é atestar a identidade dos indivíduos envolvidos numa transação de informações. Para isso, pode ser necessário que uma terceira parte se envolva, caso aqueles que se comunicam não conheçam os certificados um do outro de antemão, e esse terceiro envolvido seria uma autoridade certificadora, de confiança mútua entre os envolvidos. Essa terceira entidade, geralmente, conhecida como \textbf{Autoridade Certificadora}, é responsável por emitir e assinar os certificados digitais que circulam em determinados domínios. Por exemplo, no domínio brasileiro, temos a \textbf{AC Raiz}, como autoridade certificadora raiz, definindo quem pode ser visto como um agente certificador e emitindo certificados para tais indivíduos.
 
-	Abaixo, na figura~\ref{fig:img08} podemos observar a estrutura simplificada da árvore de certificação brasileira.
+	Na figura~\ref{fig:img08} podemos observar a estrutura simplificada da árvore de certificação brasileira.
 
 	\begin{figure}[!ht]
 		\centering
@@ -165,7 +165,7 @@
 		\label{fig:img08}
 	\end{figure}
 
-	Entretanto, esses certificados também podem apresentar erros, ou falhas, e comprometer a confiabilidade da troca de informações por diversos fatores, que podem acarretar em quebras de segurança, esses erros são explicitados através de verificações realizadas por ferramentas de geração e análise de certificados digitais (entre outras funções). No anexo~\ref{tab:erros} vemos os erros identificáveis através da ferrammenta \textbf{OpenSSL}. 
+	Entretanto, esses certificados também podem apresentar erros, ou falhas, e comprometer a confiabilidade da troca de informações por diversos fatores, que podem acarretar em quebras de segurança, esses erros são explicitados através de verificações realizadas por ferramentas de geração e análise de certificados digitais (entre outras funções). No Anexo~\ref{tab:erros} vemos os erros identificáveis através da ferrammenta \textbf{OpenSSL}. 
 
 	Cada um desses retornos (\textit{com excessão do caso zero}) envolve uma vulnerabilidade de segurança, e se não tratados, certificados que apresentam essas falhas podem representar brechas de segurança. Notemos os Erros 02, 10, 18, e 20.
 

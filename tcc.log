@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.30)  3 JUL 2015 19:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.30)  3 JUL 2015 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -995,7 +995,7 @@ File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
 Package: listings 2013/08/26 1.5b (Carsten Heinz)
-)
+
 (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip206
@@ -1013,7 +1013,7 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@tables=\count185
 \c@LT@chunks=\count186
 \LT@p@ftn=\toks36
-)
+))
 (./fixos/comandos.tex) (./fixos/novosComandos.tex) (./editaveis/informacoes.tex
 ) (./fixos/informacoes.tex) (./fixos/setup.tex
 Package hyperref Info: Option `colorlinks' set `true' on input line 16.
@@ -1140,6 +1140,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--19
  []
 
 
+Underfull \hbox (badness 1043) in paragraph at lines 20--27
+\T1/lmr/m/n/10 Iden-ti-fi-ca-ção de Ex-ce-ções de Se-gu-rança e Vul-ne-ra-bi-li
+-da-des em Cer-ti-fi-ca-dos
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 20--27
 
  []
@@ -1195,33 +1201,16 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ])
 (./editaveis/introducao.tex
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 27.
- (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-
- []
-
-[23
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-) (./editaveis/aspectosgerais.tex
-Underfull \hbox (badness 10000) in paragraph at lines 35--7
-
- []
-
-[24]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 24.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 25.
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 24.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 25.
+ [23
+
+])
+(./editaveis/aspectosgerais.tex [24]
 File: figuras/proc.eps Graphic file (type eps)
  <figuras/proc.eps>
 
@@ -1276,23 +1265,40 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 ]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 83.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 83.
 
-(./codes/FunnyCrawler.java
+(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) (./codes/FunnyCrawler.java
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1.
  [36]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [37])
-Overfull \hbox (11.53384pt too wide) in paragraph at lines 88--89
-[]\T1/lmr/m/n/12 ``https://www.google.com.br/search?q=sign+in+%2Bhttps&start=''
-+ num-ber + ``0''; 
+Overfull \hbox (27.65541pt too wide) in paragraph at lines 87--88
+[]\T1/lmtt/m/n/12 ``\T1/lmtt/m/it/12 HTTPS\T1/lmtt/m/n/12 ://www.google.com.br/
+search?q=login+%2B\T1/lmtt/m/it/12 HTTPS\T1/lmtt/m/n/12 &start=''+ number + ``0
+''\T1/lmr/m/n/12 ; 
+ []
+
+
+Overfull \hbox (12.04141pt too wide) in paragraph at lines 88--89
+[]\T1/lmtt/m/n/12 ``\T1/lmtt/m/it/12 HTTPS\T1/lmtt/m/n/12 ://www.google.com.br/
+search?q=sign+in+%2B\T1/lmtt/m/it/12 HTTPS\T1/lmtt/m/n/12 &start=''+ number +
  []
 
 [38]
-Overfull \hbox (10.22685pt too wide) in paragraph at lines 89--90
-[]\T1/lmr/m/n/12 ``https://www.google.com.br/search?q=register+%2Bhttps&start='
-'+ num-ber + ``0''; 
+Overfull \hbox (5.86641pt too wide) in paragraph at lines 89--90
+[]\T1/lmtt/m/n/12 ``\T1/lmtt/m/it/12 HTTPS\T1/lmtt/m/n/12 ://www.google.com.br/
+search?q=register+%2B\T1/lmtt/m/it/12 HTTPS\T1/lmtt/m/n/12 &start=''+ number
+ []
+
+
+Overfull \hbox (9.1304pt too wide) in paragraph at lines 91--92
+[]\T1/lmtt/m/n/12 ``\T1/lmtt/m/it/12 HTTPS\T1/lmtt/m/n/12 ://www.google.com.br/
+search?q=buy%2B\T1/lmtt/m/it/12 HTTPS\T1/lmtt/m/n/12 &start=''+ number + ``0''\
+T1/lmr/m/n/12 . 
  []
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1302,16 +1308,899 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41])
-(./codes/LISTA.py
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42])
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [42]
+(./codes/LISTA.py [43])
 
- [43]
-Overfull \hbox (765.05095pt too wide) in paragraph at lines 132--146
- [][] 
+Class memoir Warning: X Columns too narrow (table too wide)
+(memoir)               on input line 145.
+
+
+Overfull \hbox (44.65863pt too wide) in paragraph at lines 145--145
+[]|\T1/lmr/bx/n/12 Descrição| 
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\T1/lmr/m/n/12 O
+ []
+
+
+Overfull \hbox (3.26381pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 co-
+ []
+
+
+Overfull \hbox (22.84811pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 mando
+ []
+
+
+Overfull \hbox (4.56981pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 bá-
+ []
+
+
+Overfull \hbox (7.2458pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 sico
+ []
+
+
+Overfull \hbox (0.65314pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 do
+ []
+
+
+Overfull \hbox (38.4751pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/it/12 OpenSSL\T1/lmr/m/n/12 .
+ []
+
+
+Overfull \hbox (8.80817pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 Uti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 li-
+ []
+
+
+Overfull \hbox (18.27809pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 zando
+ []
+
+
+Overfull \hbox (7.96349pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 esse
+ []
+
+
+Overfull \hbox (3.26381pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 co-
+ []
+
+
+Overfull \hbox (26.1121pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 mando,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 o
+ []
+
+
+Overfull \hbox (4.70018pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 sis-
+ []
+
+
+Overfull \hbox (13.70848pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 tema
+ []
+
+
+Overfull \hbox (10.83618pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 sabe
+ []
+
+
+Overfull \hbox (6.20164pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 que
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 os
+ []
+
+
+Overfull \hbox (3.26381pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 co-
+ []
+
+
+Overfull \hbox (14.36182pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 man-
+ []
+
+
+Overfull \hbox (5.28781pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 dos
+ []
+
+
+Overfull \hbox (2.0235pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 se-
+ []
+
+
+Overfull \hbox (14.36179pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 guin-
+ []
+
+
+Overfull \hbox (2.67616pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 tes
+ []
+
+
+Overfull \hbox (8.81253pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 per-
+ []
+
+
+Overfull \hbox (8.48615pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ten-
+ []
+
+
+Overfull \hbox (8.48615pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cem
+ []
+
+
+Overfull \hbox (38.4751pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/it/12 OpenSSL\T1/lmr/m/n/12 .| 
+ []
+
+
+Overfull \hbox (23.66139pt too wide) in paragraph at lines 145--145
+[]|\T1/lmr/m/n/12 Dentro
+ []
+
+
+Overfull \hbox (0.65314pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 do
+ []
+
+
+Overfull \hbox (38.4751pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/it/12 OpenSSL\T1/lmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 o
+ []
+
+
+Overfull \hbox (3.26381pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 co-
+ []
+
+
+Overfull \hbox (22.84811pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 mando
+ []
+
+
+Overfull \hbox (3.26393pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ve-
+ []
+
+
+Overfull \hbox (5.87524pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 rify
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 é
+ []
+
+
+Overfull \hbox (6.52815pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 uti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 li-
+ []
+
+
+Overfull \hbox (11.7501pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 zado
+ []
+
+
+Overfull \hbox (11.09746pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 para
+ []
+
+
+Overfull \hbox (1.95816pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 a-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 li-
+ []
+
+
+Overfull \hbox (3.91647pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 zar
+ []
+
+
+Overfull \hbox (3.26393pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ve-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 fi-
+ []
+
+
+Overfull \hbox (3.26381pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ca-
+ []
+
+
+Overfull \hbox (9.53018pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ções
+ []
+
+
+Overfull \hbox (0.65314pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 no
+ []
+
+
+Overfull \hbox (7.18015pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cer-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 fi-
+ []
+
+
+Overfull \hbox (11.7501pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cado
+ []
+
+
+Overfull \hbox (9.20448pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 pas-
+ []
+
+
+Overfull \hbox (11.1628pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 sado
+ []
+
+
+Overfull \hbox (5.28781pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 nos
+ []
+
+
+Overfull \hbox (4.56981pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 pa-
+ []
+
+
+Overfull \hbox (2.61116pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 râ-
+ []
+
+
+Overfull \hbox (7.18083pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 me-
+ []
+
+
+Overfull \hbox (11.16249pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 tros.
+ []
+
+
+Overfull \hbox (13.86961pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 Pode
+ []
+
+
+Overfull \hbox (4.56981pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ha-
+ []
+
+
+Overfull \hbox (3.9166pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ver
+ []
+
+
+Overfull \hbox (11.1628pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 flags
+ []
+
+
+Overfull \hbox (15.0143pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 junto
+ []
+
+
+Overfull \hbox (3.26381pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 co-
+ []
+
+
+Overfull \hbox (26.1121pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 mando.| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\T1/lmr/m/n/12 A
+ []
+
+
+Overfull \hbox (6.52812pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 flag
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 -
+ []
+
+
+Overfull \hbox (20.5581pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 CAfile
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 é
+ []
+
+
+Overfull \hbox (6.52815pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 uti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 li-
+ []
+
+
+Overfull \hbox (11.7501pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 zada
+ []
+
+
+Overfull \hbox (25.7856pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 quando
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 o
+ []
+
+
+Overfull \hbox (7.18015pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cer-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 fi-
+ []
+
+
+Overfull \hbox (11.7501pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cado
+ []
+
+
+Overfull \hbox (9.4652pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 root
+ []
+
+
+Overfull \hbox (0.65314pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 do
+ []
+
+
+Overfull \hbox (15.0795pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 emis-
+ []
+
+
+Overfull \hbox (3.32916pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 sor
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 se
+ []
+
+
+Overfull \hbox (3.91681pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 en-
+ []
+
+
+Overfull \hbox (9.7918pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 con-
+ []
+
+
+Overfull \hbox (3.26382pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 tra
+ []
+
+
+Overfull \hbox (0.65314pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 no
+ []
+
+
+Overfull \hbox (23.56583pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 mesmo
+ []
+
+
+Overfull \hbox (1.95882pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 di-
+ []
+
+
+Overfull \hbox (1.95816pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 re-
+ []
+
+
+Overfull \hbox (2.61116pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 tó-
+ []
+
+
+Overfull \hbox (1.95848pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 rio
+ []
+
+
+Overfull \hbox (0.65314pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 do
+ []
+
+
+Overfull \hbox (7.18015pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cer-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 fi-
+ []
+
+
+Overfull \hbox (11.7501pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cado
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 a
+ []
+
+
+Overfull \hbox (2.67616pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ser
+ []
+
+
+Overfull \hbox (3.26393pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ve-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 fi-
+ []
+
+
+Overfull \hbox (15.0141pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cado.| 
+ []
+
+
+Overfull \hbox (10.73601pt too wide) in paragraph at lines 145--145
+[]|\T1/lmr/m/n/12 Esse
+ []
+
+
+Overfull \hbox (3.26381pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 co-
+ []
+
+
+Overfull \hbox (22.84811pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 mando
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 é
+ []
+
+
+Overfull \hbox (6.52815pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 uti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 li-
+ []
+
+
+Overfull \hbox (11.7501pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 zado
+ []
+
+
+Overfull \hbox (11.09746pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 para
+ []
+
+
+Overfull \hbox (1.30548pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ler
+ []
+
+
+Overfull \hbox (7.18015pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cer-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 fi-
+ []
+
+
+Overfull \hbox (3.26381pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ca-
+ []
+
+
+Overfull \hbox (5.28781pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 dos
+ []
+
+
+Overfull \hbox (0.65314pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 no
+ []
+
+
+Overfull \hbox (4.56981pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 pa-
+ []
+
+
+Overfull \hbox (11.09746pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 drão
+ []
+
+
+Overfull \hbox (15.34062pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 x509.
+ []
+
+
+Overfull \hbox (13.86961pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 Pode
+ []
+
+
+Overfull \hbox (4.56981pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ha-
+ []
+
+
+Overfull \hbox (3.9166pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 ver
+ []
+
+
+Overfull \hbox (11.1628pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 flags
+ []
+
+
+Overfull \hbox (15.0143pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 junto
+ []
+
+
+Overfull \hbox (3.26381pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 co-
+ []
+
+
+Overfull \hbox (26.1121pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 mando.| 
+ []
+
+
+Overfull \hbox (13.37747pt too wide) in paragraph at lines 145--145
+[]|\T1/lmr/m/n/12 Abre
+ []
+
+
+Overfull \hbox (4.57016pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 um
+ []
+
+
+Overfull \hbox (7.18015pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cer-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 fi-
+ []
+
+
+Overfull \hbox (11.7501pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cado
+ []
+
+
+Overfull \hbox (0.65314pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 no
+ []
+
+
+Overfull \hbox (4.56981pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 pa-
+ []
+
+
+Overfull \hbox (11.09746pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 drão
+ []
+
+
+Overfull \hbox (12.07663pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 x509
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 e
+ []
+
+
+Overfull \hbox (1.95816pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 re-
+ []
+
+
+Overfull \hbox (15.6668pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 torna
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 o
+ []
+
+
+Overfull \hbox (9.7918pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 con-
+ []
+
+
+Overfull \hbox (16.97244pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 teúdo
+ []
+
+
+Overfull \hbox (0.65314pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 do
+ []
+
+
+Overfull \hbox (23.56583pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 mesmo
+ []
+
+
+Overfull \hbox (3.26416pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 em
+ []
+
+
+Overfull \hbox (6.2014pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 for-
+ []
+
+
+Overfull \hbox (14.36148pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 mato
+ []
+
+
+Overfull \hbox (17.95131pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 texto.| 
+ []
+
+
+Overfull \hbox (10.73601pt too wide) in paragraph at lines 145--145
+[]|\T1/lmr/m/n/12 Esse
+ []
+
+
+Overfull \hbox (3.26381pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 co-
+ []
+
+
+Overfull \hbox (22.84811pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 mando
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 lê
+ []
+
+
+Overfull \hbox (4.57016pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 um
+ []
+
+
+Overfull \hbox (7.18015pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cer-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 fi-
+ []
+
+
+Overfull \hbox (11.7501pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cado
+ []
+
+
+Overfull \hbox (3.26416pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 em
+ []
+
+
+Overfull \hbox (4.56981pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 pa-
+ []
+
+
+Overfull \hbox (11.09746pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 drão
+ []
+
+
+Overfull \hbox (13.86568pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 DER
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 e
+ []
+
+
+Overfull \hbox (3.91681pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 de-
+ []
+
+
+Overfull \hbox (14.36134pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 volve
+ []
+
+
+Overfull \hbox (4.57016pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 um
+ []
+
+
+Overfull \hbox (7.18015pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cer-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\T1/lmr/m/n/12 fi-
+ []
+
+
+Overfull \hbox (11.7501pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 cado
+ []
+
+
+Overfull \hbox (10.4448pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 den-
+ []
+
+
+Overfull \hbox (3.26382pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 tro
+ []
+
+
+Overfull \hbox (5.28781pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 dos
+ []
+
+
+Overfull \hbox (4.56981pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 pa-
+ []
+
+
+Overfull \hbox (15.40552pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 drões
+ []
+
+
+Overfull \hbox (18.27017pt too wide) in paragraph at lines 145--145
+\T1/lmr/m/n/12 PEM.| 
+ []
+
+
+Overfull \hbox (77.7013pt too wide) in alignment at lines 145--145
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 2053.90059pt on input line 146.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 (./codes/SEPARAR.py [44]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1325,8 +2214,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [47]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48]))
-(./editaveis/textoepostexto.tex [49] [50
+ [48])
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./editaveis/textoepostexto.tex [49] [50] [51] [52
 
 ]
 File: figuras/graph01.eps Graphic file (type eps)
@@ -1344,31 +2236,31 @@ Overfull \hbox (148.25375pt too wide) in paragraph at lines 26--27
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[51]
+[53]
 Underfull \vbox (badness 1348) has occurred while \output is active []
 
- [52])
-(./editaveis/elementosdotexto.tex [53] [54
+ [54])
+(./editaveis/elementosdotexto.tex [55] [56
 
 ]) (./tcc.bbl (./tcc.brf)
 \tf@brf=\write5
 \openout5 = `tcc.brf'.
 
- [55]
-[56
+ [57]
+[58
 
 ]
 bibitemlist
-) (./editaveis/anexos.tex [57] [58
+) (./editaveis/anexos.tex [59] [60
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 4.
 
-[59
+[61
 
-] [60]
+] [62]
 Underfull \vbox (badness 10000) detected at line 41
  []
 
@@ -1376,9 +2268,9 @@ Underfull \vbox (badness 10000) detected at line 41
 No file tcc.ind.
 
 AED: lastpage setting LastPage
-[61
+[63
 
-] [62]
+] [64]
 \tf@lof=\write6
 \openout6 = `tcc.lof'.
 
@@ -1408,12 +2300,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
  ) 
 Here is how much of TeX's memory you used:
- 14743 strings out of 493305
- 210123 string characters out of 6139897
- 486484 words of memory out of 5000000
- 17873 multiletter control sequences out of 15000+600000
- 84056 words of font info for 58 fonts, out of 8000000 for 9000
+ 14746 strings out of 493305
+ 210165 string characters out of 6139897
+ 479706 words of memory out of 5000000
+ 17875 multiletter control sequences out of 15000+600000
+ 84375 words of font info for 59 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  45i,11n,75p,1544b,2080s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tcc.dvi (64 pages, 314268 bytes).
+Output written on tcc.dvi (66 pages, 318304 bytes).
