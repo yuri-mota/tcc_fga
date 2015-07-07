@@ -22,23 +22,23 @@
 \contentsline {section}{\numberline {3.2}Aquisi\IeC {\c c}\IeC {\~a}o dos Certificados}{35}{section.3.2}
 \contentsline {section}{\numberline {3.3}Valida\IeC {\c c}\IeC {\~a}o dos Certificados}{44}{section.3.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{53}{chapter.4}
-\contentsline {section}{\numberline {4.1}Sem Erro}{54}{section.4.1}
-\contentsline {section}{\numberline {4.2}Erro 02 - Unable to get issuer Cetificate}{54}{section.4.2}
-\contentsline {section}{\numberline {4.3}Erro 10 - Certificate has Expired}{55}{section.4.3}
-\contentsline {section}{\numberline {4.4}Erro 18 - Self Signed Certificate}{55}{section.4.4}
-\contentsline {section}{\numberline {4.5}Erro 20 - Unable to get Local Issuer Certificate}{55}{section.4.5}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{51}{chapter.4}
+\contentsline {section}{\numberline {4.1}Sem Erro}{52}{section.4.1}
+\contentsline {section}{\numberline {4.2}Erro 02 - Unable to get issuer Cetificate}{52}{section.4.2}
+\contentsline {section}{\numberline {4.3}Erro 10 - Certificate has Expired}{53}{section.4.3}
+\contentsline {section}{\numberline {4.4}Erro 18 - Self Signed Certificate}{53}{section.4.4}
+\contentsline {section}{\numberline {4.5}Erro 20 - Unable to get Local Issuer Certificate}{53}{section.4.5}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{57}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclus\IeC {\~a}o}}{55}{chapter.5}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Refer\^encias}{59}{section*.13}
+\contentsline {chapter}{Refer\^encias}{57}{section*.13}
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Anexos}}{61}{section*.14}
+\contentsline {part}{\uppercase {Anexos}}{59}{section*.14}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Tabela de Retornos do Verify da OpenSSL}}{63}{appendix.anexochapback.1}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Tabela de Retornos do Verify da OpenSSL}}{61}{appendix.anexochapback.1}

@@ -123,33 +123,7 @@ showstringspaces=false}
 
 		A \textit{OpenSSL} foi amplamente utilizada no processo de aquisição e verificação dos certificados por permitir, através de suas funções, que a comunicação pela porta 443  fosse feita e que os processos de comunicação pela mesma  fossem estabelecidos. Em um momento posterior, esta mesma biblioteca foi utilizada para permitir a verificação local dos certificados coletados.
 
-		A Tabela~\ref{tab:cmds01} apresenta os comandos \textit{OpenSSL} utilizados para a verificação e validação dos certificados coletados.
-
-		\begin{table}[h]
-			\centering
-			\caption{Tabela de Comandos \textit{OpenSSL}}
-			\label{tab:cmds01}
-			\begin{tabularx}{\linewidth}{ c X }
-			\toprule
-			\textbf{Comando} & \textbf{Descrição} \\ \midrule
-			\texttt{\$ \textit{OpenSSL}} & O comando básico do \textit{OpenSSL}. Utilizando esse comando, o sistema sabe que os comandos seguintes pertencem ao \textit{OpenSSL}. \\ 
-			\rowcolor[gray]{0.9}
-			\texttt{\$ \textit{OpenSSL} verify certificado} & Dentro do \textit{OpenSSL}, o comando verify é utilizado para realizar verificações no certificado passado nos parâmetros. Pode haver flags junto ao comando. \\
-			\texttt{\$ \textit{OpenSSL} verify -CAfile root certificado} & A flag -CAfile é utilizada quando o certificado root do emissor se encontra no mesmo diretório do certificado a ser verificado. \\
-			\rowcolor[gray]{0.9}
-			\texttt{\$ \textit{OpenSSL} x509 certificado} & Esse comando é utilizado para ler certificados no padrão x509. Pode haver flags junto ao comando. \\
-			\texttt{\$ \textit{OpenSSL} x509 -in certificado -text} & Abre um certificado no padrão x509 e retorna o conteúdo do mesmo em formato de texto. \\
-			\rowcolor[gray]{0.9}
-			\texttt{\$ \textit{OpenSSL} x509 -in certificado\_der -inform der -out certificado\_pem -outform pem} & Esse comando lê um certificado em padrão DER e devolve um certificado dentro dos padrões PEM. \\
-			\bottomrule
-			\end{tabularx}
-		\end{table}
-		Esses comandos, entretanto, não são utilizados diretamente via terminal, estando presentes no corpo dos \textit{Script}s (quando se fazem necessários) responsáveis por sua execução automatizada. A automatização do processo de verificação se fez necessária pelo tamanho do corpo de certificados que foram coletados para a verificação.
-
-	    Para a validação dos certificados, foi executado o \textit{Script} listado no Código~\ref{SEPARAR}.
-
-	    \lstinputlisting[language=Python,numbers=left,showstringspaces=false,caption=SEPARAR.py,label=SEPARAR]{codes/SEPARAR.py}
-	    O \textit{Script}~\ref{SEPARAR} foi então o responsável pela verificação dos certificados. Primeiro ele gera  getou dois vetores pareados usando o arquivo gerado pelo \textit{Script}~\ref{LISTA} e cuja ordem é  foid a mesma da lista gerada por tal \textit{Script}. Uma vez determinados, esses vetores pareados foram verificados utilizando comandos \textit{OpenSSL} na Tabela~\ref{tab:cmds02}.
+		A Tabela~\ref{tab:cmds02} apresenta os nomes das funções inseridas nos scripts e os comandos \textit{OpenSSL} por elas utilizados para a verificação e validação dos certificados coletados.
 
 	    \begin{table}[h]
 			\centering
@@ -164,6 +138,31 @@ showstringspaces=false}
 			\bottomrule
 			\end{tabular}
 		\end{table}
+%		\newcolumntype{s}{>{\hsize=17.8\hsize}X}
+%		\begin{table}
+%			\centering
+%			\caption{Tabela de Comandos \textit{OpenSSL}}
+%			\label{tab:cmds01}
+%			\begin{tabularx}{\textwidth}{ s s }
+%			\toprule
+%			\textbf{Comando} & \textbf{Descrição} \\ \midrule
+%			\texttt{\$ openssl} & O comando básico do \textit{OpenSSL}. Utilizando esse comando, o sistema sabe que os comandos seguintes pertencem ao \textit{OpenSSL}. \\ 
+%			\rowcolor[gray]{0.9}
+%			\texttt{\$ openssl verify certificado} & Dentro do \textit{OpenSSL}, o comando verify é utilizado para realizar verificações no certificado passado nos parâmetros. Pode haver flags junto ao comando. \\
+%			\texttt{\$ openssl verify -CAfile root certificado} & A flag -CAfile é utilizada quando o certificado root do emissor se encontra no mesmo diretório do certificado a ser verificado. \\
+%			\rowcolor[gray]{0.9}
+%			\texttt{\$ openssl x509 -in certificado -text} & Abre um certificado no padrão x509 e retorna o conteúdo do mesmo em formato de texto. \\
+%			\texttt{\$ \textit{openssl} x509 -in certificado\_der -inform der -out certificado\_pem -outform pem} & Esse comando lê um certificado em padrão DER e devolve um certificado dentro dos padrões PEM. \\
+%			\bottomrule
+%			\end{tabularx}
+%		\end{table}
+		Esses comandos, entretanto, não são utilizados diretamente via terminal, estando presentes no corpo dos \textit{Script}s (quando se fazem necessários) responsáveis por sua execução automatizada. A automatização do processo de verificação se fez necessária pelo tamanho do corpo de certificados que foram coletados para a verificação.
+
+	    Para a validação dos certificados, foi executado o \textit{Script} listado no Código~\ref{SEPARAR}.
+
+	    \lstinputlisting[language=Python,numbers=left,showstringspaces=false,caption=SEPARAR.py,label=SEPARAR]{codes/SEPARAR.py}
+	    O \textit{Script}~\ref{SEPARAR} foi então o responsável pela verificação dos certificados. Primeiro ele gera  getou dois vetores pareados usando o arquivo gerado pelo \textit{Script}~\ref{LISTA} e cuja ordem é  foid a mesma da lista gerada por tal \textit{Script}. Uma vez determinados, esses vetores pareados foram verificados utilizando comandos \textit{OpenSSL} na Tabela~\ref{tab:cmds02}.
+
 	    Através do último \textit{Script} (o \textit{Script}~\ref{SEPARAR}) foi possível gerar um arquivo .csv (comma separated value) com o nome de cada certificado e os resultados de suas avaliações automatizadas. Cada resultado corresponde a um único erro relacionado ao certificado, acusado pela verificação do \textit{OpenSSL} e extraído automaticamente.
 
     	O resultado do Código~\ref{SEPARAR} apresenta,, além do número do erro e de informações relativas ao certificado, qual a natureza do erro apontado, de acordo com a lista de retornos do comando verify do \textit{OpenSSL}, que podem ser um resultado de verificação positiva ou um dentre os trinta e dois erros previstos de serem encontrados. Estes erros são listados e descritos no Anexo~\ref{tab:erros}.
