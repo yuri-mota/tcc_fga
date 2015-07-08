@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.30)  7 JUL 2015 01:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2014.8.30)  8 JUL 2015 02:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1343,30 +1343,36 @@ Overfull \hbox (148.25375pt too wide) in paragraph at lines 26--27
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [51]
-Underfull \vbox (badness 1348) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52])
-(./editaveis/elementosdotexto.tex [53] [54
+ [52]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53])
+(./editaveis/elementosdotexto.tex [54] [55] [56
 
 ]) (./tcc.bbl (./tcc.brf)
 \tf@brf=\write5
 \openout5 = `tcc.brf'.
 
- [55]
-[56
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+[58
 
 ]
 bibitemlist
-) (./editaveis/anexos.tex [57] [58
+) (./editaveis/anexos.tex [59] [60
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 4.
 
-[59
+[61
 
-] [60]
+] [62]
 Underfull \vbox (badness 10000) detected at line 41
  []
 
@@ -1374,9 +1380,9 @@ Underfull \vbox (badness 10000) detected at line 41
 No file tcc.ind.
 
 AED: lastpage setting LastPage
-[61
+[63
 
-] [62]
+] [64]
 \tf@lof=\write6
 \openout6 = `tcc.lof'.
 
@@ -1414,4 +1420,4 @@ Here is how much of TeX's memory you used:
  957 hyphenation exceptions out of 8191
  45i,11n,75p,1544b,2080s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tcc.dvi (64 pages, 313808 bytes).
+Output written on tcc.dvi (66 pages, 320608 bytes).

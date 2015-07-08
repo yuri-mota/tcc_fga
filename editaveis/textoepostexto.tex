@@ -8,7 +8,7 @@
 
 \chapter[Resultados]{Resultados}
 
-	Através da verificação automática feita utilizando a ferramenta OpenSSL, em conjunto com \textit{scrypts}, foram alcançados resultados, vistos no Gráfico~\ref{fig:graph01}. Esses resultados retornaram uma tabela, cujos valores incluem se as verificações encontraram algum erro e qual foi o erro encontrado, além de identificarem em quais certificados foram encontrados cada um dos erros.
+	Através da verificação automática feita utilizando a ferramenta OpenSSL, em conjunto com \textit{scrypts}, foram alcançados resultados, vistos na Figura~\ref{fig:graph01}. Esses resultados retornaram uma tabela, cujos valores incluem se as verificações encontraram algum erro e qual foi o erro encontrado, além de identificarem em quais certificados foram encontrados cada um dos erros.
 
 	\begin{figure}[h]
 		\centering
@@ -19,7 +19,7 @@
 
 	Os números com que os erros se repetiram foram um dos dados extraídos da tabela, que se baseia na verificação de 799 (setecentos e noventa e nove) certificados digitais. Vale notar, também, que destes certificados verificados, foram considerados certificados de pessoa jurídica em sites de qualquer domínio.
 
-	Os erros constatados são apresentados em proporção à suas ocorrências, como visto no Gráfico~\ref{fig:graph02}.
+	Os erros constatados são apresentados em proporção à suas ocorrências, como visto na Figura~\ref{fig:graph02}.
 
 	\begin{figure}[h]
 		\centering
@@ -30,18 +30,26 @@
 
 \section[Sem Erro]{Sem Erro}
 
-
 	Os certificados que não apresentaram erros na verificação representam aproximadamente 64,45\% (sessenta e quatro por cento) dos certificados verificados no primeiro momento do trabalho. Esses certificados estão, de acordo com a verificação feita pela ferramenta OpenSSL, de acordo com as exigências dos PKCSs que adotam o padrão x509 como formato final.
+	
+	Esses certificados são certificados ideais, cuja confiança reside na cadeia de certificação, reconhecida e atestada pelos métodos de avaliação utilizados pelos envolvidos na comunicação. As assinaturas e as autoridades por toda a cadeia são atestadas e apenas os certificados de Autoridades Certificadoras no topo de suas hierarquias são auto-assinados.
 
 \section[Erro 02 - Unable to get issuer Cetificate]{Erro 02 - Unable to get issuer Cetificate}
 
 	Na documentação da ferramenta OpenSSL, o erro 02 (dois) identifica que a verificação retornou a mensagem: Incapaz de conseguir o certificado do emissor.
 	Esse erro se apresenta quando a cadeia de certificados não está completa na listagem disponível no certificado analisado. O erro 02 (dois) se apresentou em aproximadamente 14\% (quatorze por cento) dos certificados verificados.
 
+	Uma das principais consequências que se pode ter ao encontrar esse erro vem da incapacidade de verificar a certificação do emissor em questão. Como forma de forjar um certificado, um indivíduo pode gerar um certificado inválido e assiná-lo com outro certificado inválido, ocultando o de maior posição na cadeia de certificação, ele poderia forjar um certificado duvidoso sem se denunciar como um certificado auto-assinado.
+
+	A incapacidade de encontrar referências válidas na cadeia de certificação deixa a análise do certificado vulnerabilizada, assim como a confiança do outro indivíduo envolvido, o que dificultaria a garantia de identidade e acarretando em uma séria situação. Visto em outro quadro, essa situação pode ser constrangedora, pois um certificado assinado sem referências acessíveis não é capaz de cumprir o objetivo a que se propõe, de identificar através do atestado de terceiros.
+
 \section[Erro 10 - Certificate has Expired]{Erro 10 - Certificate has Expired}
 
 	Na documentação da ferramenta OpenSSL, o erro 10 (dez) identifica que a verificação retornou a mensagem: O certificado expirou.
 	Esse erro se apresenta se, e somente se, o certificado estiver sendo utilizado além de sua validade original. Um certificado digital tem um período de validade especificado no momento em que ele é emitido, e uma vez que esse prazo se cumpriu, ele deixa de ser reconhecido como válido. O erro 10 (dez) se apresentou em aproximadamente 3\% (três por cento) dos certificados verificados.
+	
+	A ocorrência desse erro é preocupante pois, uma vez que a validade de um certificado se vá, outros detalhes sobre ele não são mais confiáveis, não se sabe se aquele portador ainda é o mesmo que se identifica no certificado. Mais comumente, certificados são utilizados por pessoas jurídicas e quem responde por aquele nome, quem pode responder por aquela marca, nem sempre são os mesmos indivíduos de tempos em tempos.
+	A informação contida no certificado pode estar desatualizada. A comunicação pode estar sendo feita com um portador anterior, que já não é mais autorizado a utilizar-se daquela identidade, ou acessar certa informação.
 
 \section[Erro 18 - Self Signed Certificate]{Erro 18 - Self Signed Certificate}
 
@@ -49,8 +57,16 @@
 	Neste caso em específico, duas condições foram encontradas irregulares no certificado. A primeira e mais evidente é que o alvo da certificação e o emissor do certificado são a mesma entidade; a segunda que se apresenta é que o certificado não se encontra na lista de certificados confiáveis, o que significa que ele não é uma autoridade certificadora raiz.
 	O erro 18 (dezoito) se apresentou em aproximadamente 2,75\% (dois vírgula setenta e cinco por cento) dos certificados verificados.
 	
+	Esses certificados nem sempre devem ser tidos como erros, por exemplo no caso de algumas autoridades certificadoras cujos certificados precisam ser auto-assinados para indicar o fim da cadeia de certificação. Logicamente, nesses casos, esses certificados se diferenciam dos outros.
+
+	Porém, quando utilizados em outros contextos, esses certificados não servem como prova de identidade, pois não é um fator definitivo de identidade, assumindo um contexto em que desconhecidos usam certificados digitais para se identificar. Esse tipo de erro daria brechas para que qualquer um assumisse a identidade que lhe fosse interessante. Em um ataque como o \textit{Man-In-The-Middle Attack}, o atacante poderia facilmente se certificar como um, ou mesmo ambos, os indivíduos da comunicação, interceptando e controlando toda a informação trocada.
+
 \section[Erro 20 - Unable to get Local Issuer Certificate]{Erro 20 - Unable to get Local Issuer Certificate}
 
 	Na documentação da ferramenta OpenSSL, o erro 20 (vinte) identifica que a verificação retornou a mensagem: Incapaz de acessar o emissor local do certificado.
 	Um erro que ocorre quando o certificado do emissor não pôde ser encontrado. Nesse caso o certificado do emissor é inicialmente procurado através da referência presente no certificado em análise, e quando o acesso não oferece um retorno positivo, a ferramente verificadora procura o certificado localmente, analisando o certificado do emissor passado na verificação, retornando esse erro caso ainda haja incoerências na verificação do certificado.
 	O erro 20 (vinte) representa 15,75\% (quinze vírgula setenta e cinco por cento) dos certificados verificados.
+
+	É um erro parecido com o \textit{Erro 02}, porém, se estende, no sentido de que, ao tentar conseguir o certificado do emissor de forma remota e receber uma resposta negativa, a cadeia foi procurada localmente e também não foi encontrada. As vulnerabilidades apresentadas são as mesmas vulnerabilidades que se vê no \textit{erro 02}. 
+
+	Nesse trabalho acadêmico esse erro não se apresenta pela falta de referências locais, pois os métodos utilizados buscam a fonte dos certificados para disponibilizar a cadeia localmente. Esse erro pode ser considerado, então, uma extensão do \textit{erro 02} em suas razões.
