@@ -84,13 +84,13 @@ showstringspaces=false}
 		O Código~\ref{MKYONG} foi escrito a partir de um tutorial da ferramenta JSON, da plataforma Java, disponibilizado na internet \cite{mkyong_url}. Sua função é analisar os resultados de uma pesquisa Google e retornar os links disponibilizados pela mesma na forma de um conjunto (SET). As seguintes strings de busca foram utilizadas:
 		
 		\begin{itemize}
-			\item \texttt{\lq\lq \textit{HTTPS}://www.google.com.br/search?q=login+\%2B\textit{HTTPS}\&start=\rq\rq + number + \lq\lq0\rq\rq};
+			\item \texttt{\lq\lq \textit{HTTPS}://www.google.com.br/search?q=login+\%2B\textit{HTTPS}\&start=\rq\rq + number + \lq\lq0\rq\rq} \footnote{O parâmetro “number” é utilizado para a navegação em diferentes páginas, durante a busca.};
 			\item \texttt{\lq\lq \textit{HTTPS}://www.google.com.br/search?q=sign+in+\%2B\textit{HTTPS}\&start=\rq\rq + number + \lq\lq0\rq\rq};
 			\item \texttt{\lq\lq \textit{HTTPS}://www.google.com.br/search?q=register+\%2B\textit{HTTPS}\&start=\rq\rq + number + \lq\lq0\rq\rq};
 			\item \texttt{\lq\lq \textit{HTTPS}://www.google.com.br/search?q=\%2B\textit{HTTPS}\&start=\rq\rq + number + \lq\lq0\rq\rq};
 			\item \texttt{\lq\lq \textit{HTTPS}://www.google.com.br/search?q=buy\%2B\textit{HTTPS}\&start=\rq\rq + number + \lq\lq0\rq\rq}.
 		\end{itemize}
-		* - O parâmetro “number” é utilizado para a navegação em diferentes páginas, durante a busca.
+		
 		
 		Os retornos, no caso links para resultados das buscas, foram direcionados para um arquivo de texto (\texttt{UTF-8}), onde os links são colocados de forma que cada link ocupa uma única linha do arquivo.\\
 		\textit{“...\\
@@ -119,7 +119,7 @@ showstringspaces=false}
 		\lstinputlisting[language=Python,numbers=left,showstringspaces=false,caption=LISTA.py,label=LISTA]{codes/LISTA.py}
 		A função do \textit{Script}~\ref{LISTA} é pegar todos os arquivos \texttt{.pem} presentes no mesmo diretório que ele e pesquisar se para eles existe um arquivo \texttt{.root} associado. O \textit{Script} então gera uma lista pareada de \texttt{.pem}'s e \texttt{.root}'s na qual, caso não haja um par, o \texttt{.pem} será pareado com um hífen ( - ), para identificação dos arquivos sem \texttt{.root} quando for feita a verificação dos certificados.
 
-		\section[Validação dos Certificados]{Validação dos Certificados}
+		\section[Verificação dos Certificados]{Verificação dos Certificados}
 
 		A \textit{OpenSSL} foi amplamente utilizada no processo de aquisição e verificação dos certificados por permitir, através de suas funções, que a comunicação pela porta 443  fosse feita e que os processos de comunicação pela mesma  fossem estabelecidos. Em um momento posterior, esta mesma biblioteca foi utilizada para permitir a verificação local dos certificados coletados.
 
@@ -132,9 +132,9 @@ showstringspaces=false}
 			\begin{tabular}{c>{\em}l}
 			\toprule
 			\textbf{Comando} & \textbf{Descrição} \\ \midrule
-			\texttt{\$ cmdVerify} & \$ \textit{OpenSSL} verify certificado.crt \\ 
+			\texttt{cmdVerify} & \$ \textit{OpenSSL} verify certificado.crt \\ 
 			\rowcolor[gray]{0.9}
-			\texttt{\$ cmdCAverify} & \$ \textit{OpenSSL} verify -CAfile certificado\texttt{.root} certificado.crt \\
+			\texttt{cmdCAverify} & \$ \textit{OpenSSL} verify -CAfile certificado\texttt{.root} certificado.crt \\
 			\bottomrule
 			\end{tabular}
 		\end{table}
@@ -165,6 +165,6 @@ showstringspaces=false}
 
 	    Através do último \textit{Script} (o \textit{Script}~\ref{SEPARAR}) foi possível gerar um arquivo .csv (comma separated value) com o nome de cada certificado e os resultados de suas avaliações automatizadas. Cada resultado corresponde a um único erro relacionado ao certificado, acusado pela verificação do \textit{OpenSSL} e extraído automaticamente.
 
-    	O resultado do Código~\ref{SEPARAR} apresenta,, além do número do erro e de informações relativas ao certificado, qual a natureza do erro apontado, de acordo com a lista de retornos do comando verify do \textit{OpenSSL}, que podem ser um resultado de verificação positiva ou um dentre os trinta e dois erros previstos de serem encontrados. Estes erros são listados e descritos no Anexo~\ref{tab:erros}.
+    	O resultado do Código~\ref{SEPARAR} apresenta, além do número do erro e de informações relativas ao certificado, qual a natureza do erro apontado, de acordo com a lista de retornos do comando verify do \textit{OpenSSL}, que podem ser um resultado de verificação positiva ou um dentre os trinta e dois erros previstos de serem encontrados. Estes erros são listados e descritos no Anexo~\ref{tab:erros}.
 
     	No próprio arquivo .csv resultante foi utilizada a função \texttt{SUMIF()}, nativa da ferramenta OpenOffice Math, que adiciona termos ao somatório quando estes atendem a condição especificada dentro de seus parâmetros.

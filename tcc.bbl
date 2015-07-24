@@ -5,6 +5,16 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.2 }
 
+\bibitem[Callas et al. 2007]{PGP}
+\abntrefinfo{Callas et al.}{CALLAS et al.}{2007}
+{CALLAS, J. et al. \emph{{https://tools.ietf.org/html/rfc4880}}. [S.l.]: IETF,
+  2007.}
+
+\bibitem[Cooper et al. 2008]{RFC5280}
+\abntrefinfo{Cooper et al.}{COOPER et al.}{2008}
+{COOPER, D. et al. \emph{{https://tools.ietf.org/html/rfc5280}}. [S.l.]: IETF,
+  2008.}
+
 \bibitem[Crypto 2005]{DEA}
 \abntrefinfo{Crypto}{CRYPTO}{2005}
 {CRYPTO, M. \emph{{https://en.wikipedia.org/wiki/FILE:DES-main-network.png}}.

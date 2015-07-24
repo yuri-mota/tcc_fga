@@ -1,4 +1,4 @@
-%##############################################%
+%##############################################%2
 % aspectosgerais < Desenvolvimento             %
 % consideracoes < Metodologia                  %
 % textoepostexto < Resultados                  %
@@ -21,24 +21,22 @@
 	Nesse quadro, dois indivíduos pretendem trocar informações e desejam trocar suas mensagens de forma segura, eles desejam confidencialidade. Para esse fim, eles podem escolher utilizar a criptografia. A criptografia em si, possui muitos fins:
 
 	\begin{itemize}
-		\item \textbf{Confidencialidade} - Ocultar a informação contida em uma mensagem, de forma que apenas o emissor e o receptor conheçam seu conteúdo.
+		\item \textbf{Confidencialidade} - Proteger a informação contida em uma mensagem, de forma que apenas o emissor e o receptor conheçam seu conteúdo.
 		\item \textbf{Autenticação} - Dar a possibilidade do recebedor identificar a origem de uma mensagem.
 		\item \textbf{Integridade} - Permitir que o recebedor tenha certeza que aquela mensagem não foi modificada por um terceiro.
-		\item \textbf{Não-Repudiação} - Um remetente não deve ser capaz de negar falsamente o envio de uma mensagem.
+		\item \textbf{Não-Repúdio} - Um remetente não deve ser capaz de negar falsamente o envio de uma mensagem.
 	\end{itemize}
 
-	Os indivíduos de nosso exemplo serão, figurativamente, chamados de \textit{A} e \textit{B}, e suas mensagens serão chamadas de \textit{mA} e \textit{mB}, respectivamente. Chamando a mensagem original, \textit{mA}, de \textbf{texto plano}, ela pode ser alterada através de \textit{encriptação} para gerar um \textbf{texto cifrado}, \textit{enA}, e retornará ao seu estado original passando por uma \textit{desencriptação} \cite[p.~15]{schneier96}, como vemos na Figura~\ref{fig:img01}.
+	Os indivíduos de nosso exemplo serão, figurativamente, chamados de \textit{A} e \textit{B}, e suas mensagens serão chamadas de \textit{mA} e \textit{mB}, respectivamente. Chamando a mensagem original, \textit{mA}, de \textbf{texto plano}, ela pode ser alterada através de \textit{Cifração} para gerar um \textbf{texto cifrado}, \textit{enA}, e retornará ao seu estado original passando por uma \textit{Decifração} \cite[p.~15]{schneier96}, como vemos na Figura~\ref{fig:img01}.
 
 	\begin{figure}[h]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.5]{figuras/proc.eps}
-		\caption{Processo de Encriptação e Decriptação}
+		\caption{Processo de Cifração e Decriptação}
 		\label{fig:img01}
 	\end{figure}
 
-	Um algoritmo de criptografia pode ser chamado de cipher code. Existem cipher codes cuja segurança depende de seu segredo, e existem outros cuja segurança depende do segredo de valores denominados chaves.
-	
-	Porém, a comunicação em si pode não estar completamente segura apenas com o uso da criptografia, caso um algoritmo ou chave de encriptação secretos sejam expostos, esses casos caracterizam quebras de segurança \cite[p.~399]{stallings11}:
+	Porém, a comunicação em si pode não estar completamente segura apenas com o uso da criptografia, caso um algoritmo ou chave de Cifração secretos sejam expostos, esses casos caracterizam quebras de segurança \cite[p.~399]{stallings11}:
 	
 	\begin{itemize}
 		\item \textbf{Quebra Total} - Um indivíduo externo descobriu a \textit{chave} do algoritmo.
@@ -49,55 +47,55 @@
 
 	Para reduzir as chances de possíveis vazamentos de mensagens, é possível seguir protocolos de comunicação, esses \textit{protocolos} se fazem úteis tanto para padronizar a forma como as informações são trocadas quanto para ajudar na interpretação do que está sendo falado pelos envolvidos.
 	
+	Um \textbf{protocolo criptográfico} é aquele protocolo que aplica criptografia \cite[p.~31]{schneier96}, como por exemplo o protocolo de comunicação \textit{HTTPS}. Os protocolos ajudam a gerar confiança entre os indivíduos, eles podem exigir uma troca de chaves secretas. Isso pode ser feito para convencer os participantes de que são quem verdadeiramente afirmam. Deve-se ter em mente, também, que o protocolo deve se limitar ao que se propõe em cada caso, para aumentar a segurança dos indivíduos.
+
 	A criptografia em si pode ser reforçada por outros métodos que tornariam a troca de mensagens ainda mais segura, é possível então que os indivíduos insiram na sua forma de comunicação um \textbf{protocolo}. Um \textit{protocolo} é um processo realizado pelos participantes de uma atividade (no caso a comunicação) para realizar essa atividade, sendo que esse processo apresenta passos bem definidos e que devem ser seguidos \cite{schneier96}.
-	
-	Um \textbf{protocolo criptográfico} é aquele que envolve protocolo que envolve criptografia \cite[p.~31]{schneier96}, como por exemplo o protocolo de comunicação \textit{HTTPS}. Os protocolos ajudam a gerar confiança entre os envolvidos, eles podem exigir uma troca de chaves secretas ou uma linguagem específica. Isso pode ser feito para convencer os envolvidos de que são quem verdadeiramente afirmam. Deve-se ter em mente, também, que o protocolo deve se limitar ao que se propõe em cada caso, para aumentar a segurança dos indivíduos.
 	
 	Como exemplo é possível imaginar dois estranhos se vendo pela primeira vez, imagine que o protocolo social que se segue é cumprimentar as pessoas com um aperto de mão. Caso os dois estranhos se encontrem na rua, e se cumprimentem com um aperto de mãos, eles dirão um ao outro seus respectivos nomes, e iniciarão uma conversa. Caso o aperto de mãos não ocorra, isso seria uma quebra de protocolo, e a comunicação entre eles terminaria ali.
 
 \section[Algoritmos e Chaves]{Algoritmos e Chaves}
 
-	Existem duas formas mais populares de se tratar com chaves de segurança, mantendo-as em segredo (\textit{chaves secretas ou privadas}), na \textbf{criptografia de chave simétrica}, ou tornando-as acessíveis (\textit{chaves públicas}) em par com chaves privadas, na \textbf{criptografia de chave assimétrica}. Cada um dos casos apresenta suas próprias vantagens, e desvantagens, sendo possível trabalhar com ambos objetivando uma troca segura de informações.
+	Existem duas formas mais populares de se tratar com chaves de segurança, mantendo-as em segredo (\textit{chaves secretas}), na \textbf{criptografia de chave simétrica}, ou tornando-as acessíveis (\textit{chaves públicas}) em par com \textit{chaves privadas}, na \textbf{criptografia de chave assimétrica}. Cada um dos casos apresenta suas próprias vantagens, e desvantagens, sendo possível trabalhar com ambos objetivando uma troca segura de informações.
 	
-	Nos algoritmos de chave privada, a chave é compartilhada pelos envolvidos na troca de informações. Utilizando de um mesmo algoritmo conhecido, eles irão enviar suas mensagens, e recebê-las, utilizando uma mesma chave secreta para o processo de encriptar e \textit{desencriptar} as informações trocadas, como visto na Figura~\ref{fig:img02}. Na atualidade, é comum que essas chaves privadas sejam monitoradas por \textbf{KDCs} (\textit{Key Distribution Centers}), \textbf{Centros de Distribuição de Chaves}, afim de arbitrar a distribuição e consenso em relação à chave utilizada em uma troca.
+	Nos algoritmos de chave privada, a chave é compartilhada pelos envolvidos na troca de informações. Utilizando de um mesmo algoritmo conhecido, eles irão enviar suas mensagens, e recebê-las, utilizando uma mesma chave secreta para o processo de cifrar e \textit{Decifrar} as informações trocadas, como visto na Figura~\ref{fig:img02}. Na atualidade, é comum que essas chaves privadas sejam monitoradas por \textbf{KDCs} (\textit{Key Distribution Centers}), \textbf{Centros de Distribuição de Chaves}, afim de arbitrar a distribuição e consenso em relação à chave utilizada em uma troca.
 
 	\begin{figure}[h]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.5]{figuras/img01.eps}
-		\caption{Processo de Encriptação e Desencriptação com Chave Privada}
+		\caption{Processo de Cifração e Decifração com Chave Privada}
 		\label{fig:img02}
 	\end{figure}
 
-	Já os algoritmos de chave pública seguem uma ideia diferente, existe uma chave conhecida publicamente e uma chave secreta, idealmente conhecida apenas pelo usuário. Através da encriptação utilizando a chave pública de um indivíduo, exemplo na Figura~\ref{fig:img03}, os algoritmos de chave assimétrica irão garantir que apenas a chave privada do indivíduo seja capaz de desencriptar a mensagem, visto na Figura~\ref{fig:img04}. Da mesma forma, utilizar a própria chave privada para encriptar um conteúdo irá garantir que apenas a chave pública seja utilizada para desencriptar corretamente aquela mensagem, atestando a origem daquela mensagem.
+	Já os algoritmos de chave pública seguem uma ideia diferente, existe uma chave conhecida publicamente e uma chave privada, idealmente conhecida apenas pelo usuário. Através da Cifração utilizando a chave pública de um indivíduo, exemplo na Figura~\ref{fig:img03}, os algoritmos de chave assimétrica irão garantir que apenas a chave privada do indivíduo seja capaz de Decifrar a mensagem, visto na Figura~\ref{fig:img04}. Da mesma forma, utilizar a própria chave privada para cifrar um conteúdo irá garantir que apenas a chave pública seja utilizada para Decifrar corretamente aquela mensagem, atestando a origem daquela mensagem.
 
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.5]{figuras/encript.eps}
-		\caption{Processo de Encriptação em Chave Pública}
+		\caption{Processo de Cifração em Chave Pública}
 		\label{fig:img03}
 	\end{figure}
 	
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.5]{figuras/desencript.eps}
-		\caption{Processo de Desencriptação em Chave Pública}
+		\caption{Processo de Decifração em Chave Pública}
 		\label{fig:img04}
 	\end{figure}
 
-	Nesse contexto, a encriptação com a própria chave privada serviria como meio de assinar um conteúdo, ainda no contexto da Figura~\ref{fig:img03}, de forma a garantir a autenticidade e a não-repudiação. Em se tratando de uma comunicação verdadeiramente séria, é possível empregar mais de uma encriptação, com o objetivo de garantir que um conteúdo seja lido apenas pelo destinatário, e que seja provada a identidade do remetente.
+	Nesse contexto, a Cifração com a própria chave privada serviria como meio de assinar um conteúdo, ainda no contexto da Figura~\ref{fig:img03}, de forma a garantir a autenticidade e a não-repúdio. Em se tratando de uma comunicação que  necessite de maior segurança, é possível empregar mais de uma Cifração, com o objetivo de garantir que um conteúdo seja lido apenas pelo destinatário, e que seja provada a identidade do remetente.
 	
-	Entretanto, para garantir  que essas trocas sejam feitas, e que haja consenso em como encriptar e desencriptar essas informações, é necessário que os algoritmos utilizados no processo sejam conhecidos por ambas as partes. Diferente de algoritmos que se tornam seguros através do segredo do algoritmo em si, algoritmos que utilizam chaves, geralmente, tem sua segurança embasada nas chaves em si, sendo os algoritmos públicos. Historicamente, existem diversos algoritmos de criptografia conhecidos e utilizados, vale citar dois desses algoritmos: o DES e o RSA.
+	Entretanto, para garantir  que essas trocas sejam feitas, e que haja consenso em como cifrar e Decifrar essas informações, é necessário que os algoritmos utilizados no processo sejam conhecidos por ambas as partes. Diferente de algoritmos que se tornam seguros através do segredo do algoritmo em si, algoritmos que utilizam chaves, geralmente, tem sua segurança embasada nas chaves em si, sendo os algoritmos públicos. Historicamente, existem diversos algoritmos de criptografia conhecidos e utilizados, vale citar dois desses algoritmos: o DES e o RSA \cite{stallings11}.
 	
-	Um dos primeiros algoritmos utilizados em larga escala, o DES (Data Encryption Standard) na verdade se trata de um padrão, detentor do algoritmo DEA (Data Encryption Algorithm). Em seu funcionamento, esse algoritmo adota a Função de Feistel, que realiza a encriptação através de quatro estágios. A função-F (como é conhecida a função de Feistel) é repetida diversas vezes dentro do algoritmo, observado na Figura~\ref{fig:img05}, de forma que ao final de diversas repetições será alcançado o texto cifrado.
+	Um dos primeiros algoritmos utilizados em larga escala, o DES (Data Encryption Standard) na verdade se trata de um padrão, detentor do algoritmo DEA (Data Encryption Algorithm). Em seu funcionamento, esse algoritmo adota a Função de Feistel, que realiza a Cifração através de quatro estágios. A função-F (como é conhecida a função de Feistel) é repetida diversas vezes dentro do algoritmo, observado na Figura~\ref{fig:img05}, de forma que ao final de diversas repetições será alcançado o texto cifrado.
 	
 	\begin{figure}[!ht]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.3]{figuras/DES.eps}
-		\caption{Processo de Encriptação do DEA \cite{DEA}}
+		\caption{Processo de Cifração do DEA \cite{DEA}}
 		\label{fig:img05}
 	\end{figure}
 	
-	Já o RSA, nomeado assim em referência aos seus criadores, é utilizado para a encriptação utilizando chaves assimétricas. Seu funcionamento difere, pois certas formalidades são exigidas para gerar as chaves a serem utilizadas nesse algoritmo. As chaves utilizadas dependem de dois números primos grandes (o que matematicamente diminui as chances de uma quebra de segurança) que irão ser utilizados em sua geração, que se dá de forma que:
+	Já o RSA, nomeado assim em referência aos seus criadores, é utilizado para a Cifração utilizando chaves assimétricas. Seu funcionamento difere, pois certas formalidades são exigidas para gerar as chaves a serem utilizadas nesse algoritmo. As chaves utilizadas dependem de dois números primos grandes (o que matematicamente diminui as chances de uma quebra de segurança) que irão ser utilizados em sua geração, que se dá de forma que:
 	
 	\begin{enumerate}
 		\item Dois números primos grandes \textit{p} e \textit{q}, são escolhidos;
@@ -107,7 +105,7 @@
 		\item Calcula-se \textit{d} como inverso multiplicativo de \textit{e}, onde $\bmod{\varphi(n)}$
 	\end{enumerate}
 	
-	Assim gerando uma chave pública através do par \textit{(e, n)}, e uma chave privada do conjunto \textit{(p, q, d)} ou apenas \textit{(d)}, o segundo caso sendo uma abordagem mais lenta, pois o desencriptador não conhece os primos originais. A encriptação e desencriptação se dão, respectivamente, pelas fórmulas: \textit{(onde m é o texto plano, e c é o texto cifrado)}
+	Assim gerando uma chave pública através do par \textit{(e, n)}, e uma chave privada do conjunto \textit{(p, q, d)} ou apenas \textit{(d, n)}, o segundo caso sendo uma abordagem mais lenta, pois o desencriptador não conhece os primos originais. A Cifração e Decifração se dão, respectivamente, pelas fórmulas: \textit{(onde m é o texto plano, e c é o texto cifrado)}
 	
 	\begin{enumerate}
 		\item $c = m^e \bmod{n}$
@@ -116,27 +114,29 @@
 	
 	Existem muitos algoritmos de cifração de chave pública, porém a maioria é impraticável por questões de desempenho. É importante notar que a complexidade envolvida nesses algoritmos desse tipo se deve a existência da própria chave pública, pois os procedimentos envolvidos para gerá-la não são simples, nem mais eficientes que algoritmos simétricos \cite{stallings11}. Para se trabalhar com esse tipo de sistema, é necessário que o algoritmo e a chave pública não sejam suficientes para descobrir a chave privada \cite{pkcs8}. Essa mesma capacidade de gerar chaves públicas em par com chaves privadas permite que algoritmos assimétricos gerem um texto cifrado a partir de um texto plano usando uma chave pública, e que a chave privada seja a única capaz de decifrar aquele texto cifrado gerado \cite{pkcs1}.
 	
-	Originalmente o que foi proposto por Diffie-Hellman para as aplicações de algoritmos de chave pública permitia apenas a Troca de Chaves, já na abordagem RSA se tornou possível utilizar Assinaturas Digitais \cite[p.~12]{pkcs1} e esquemas de Encriptação/Decriptação \cite[p.~15]{pkcs1}; o uso do RSA se tornou difundido pela sua aplicabilidade e a impraticabilidade de ataques por conta do tamanho e administração de suas chaves.
+	Originalmente o que foi proposto por Diffie-Hellman para as aplicações de algoritmos de chave pública permitia apenas a Troca de Chaves, já na abordagem RSA se tornou possível utilizar Assinaturas Digitais \cite[p.~12]{pkcs1} e esquemas de Cifração/Decriptação \cite[p.~15]{pkcs1}; o uso do RSA se tornou difundido pela sua aplicabilidade e a impraticabilidade de ataques por conta do tamanho e administração de suas chaves.
 	
 	Pela capacidade de gerar novas chaves públicas, e possuir uma chave privada, os algoritmos assimétricos servem aos seguintes propósitos \cite[p.~275]{stallings11}:
 	
 	\begin{itemize}
-		\item \textbf{Encriptação/Decriptação} - O remetente pode encriptar uma mensagem com a \textit{chave pública} do receptor.
+		\item \textbf{Cifração/Decifração} - O remetente pode cifrar uma mensagem com a \textit{chave pública} do receptor.
 		\item \textbf{Assinatura Digital} - Um remetente pode assinar uma mensagem com sua \textit{chave privada}. A assinatura pode ser alcançada por métodos diferentes, de acordo com os \textit{protocolos} utilizados.
 		\item \textbf{Troca de Chaves} - Duas entidades em conjunto geram uma \textbf{chave de sessão}. Assim como na assinatura digital, existem diversas aproximações para que isso seja alcançado. 
-	\end{itemize}
+	\end{itemize}	
 
 \section[Certificados Digitais]{Certificados Digitais}
 
-	No contexto da comunicação segura, a ideia de saber a identidade do outro indivíduo é essencial; Não é desejável que um desconhecido se faça passar pela receptor, ou mesmo pelo emissor, um \"homem do meio\". Para garantir essa comunicação de um para um, é desejável que sejam apresentadas credenciais que garantam que a mensagem foi transmitida sem desvios, e pelo emissor esperado. Acerca disso, Schneier exemplifica:
+	No contexto da comunicação segura, a ideia de saber a identidade do outro indivíduo é essencial. Não é desejável que um desconhecido se faça passar pela receptor, ou mesmo pelo emissor, um \lq\lq\textit{man-in-the-middle}\rq\rq. Para garantir essa comunicação de um para um, é desejável que sejam apresentadas credenciais que garantam que a mensagem foi transmitida sem desvios, e pelo emissor esperado. Acerca disso, Schneier exemplifica:
 
 	\textit{\lq\lq Um certificado público é a chave pública de alguém, assinada por alguém confiável. Certificados são usados para frustar tentativas de substituir uma chave por outra [879]. O certificado de Bob, numa base de dados de chaves-públicas, possui muito mais que sua chave pública. Ela contém informações sobre Bob -seu nome, endereço, e por aí vai- e é assinado por alguém em quem Alice confia: Trent (comumente conhecido como uma autoridade certificadora, ou AC)}...\rq\rq\ \cite[p.~163, com adaptações]{schneier96}.
 
 	Em suma, o que o autor diz é que a forma mais simples de atestar a identidade de uma pessoa é utilizando um \textbf{certificado de chave pública}. Pensando numa situação onde aparecem os indivíduos \textbf{A}, \textbf{B}, e \textbf{C}, um certificado apresenta várias informações sobre um \textit{indivíduo A}, e é assinado por um \textit{indivíduo C} externo, para que o \textit{indivíduo B} passe a confiar no \textit{indivíduo A}. Para que esse certificado seja confiável e válido, é necessário que o \textit{indivíduo A} e o \textit{indivíduo B} confiem no \textit{indivíduo C}. No caso o indivíduo C seria então conhecido como uma \textbf{Autoridade Certificadora}.
 
+	Neste trabalho tratar-se-a um \textit{certificado seguro} como aquele que não apresenta erros, não gerando \textit{vulnerabilidades} no processo de comunicação que esteja sendo realizado. Uma \textit{vulnerabilidade} seria uma possibilidade de interferência ou interceptação nas informações que estejam sendo trocadas pelos indivíduos que se comunicam. Estas \textit{vulnerabilidades} podem ser resultados de \textit{exceções}, que seriam certificados aceitos apesar da detecção de erros durante a verificação.
+
 	Para que esses certificados possam seguir um padrão, foram criados os \textbf{Public-Key Cryptography Standards}, ou \textit{PKCS}, e dentre elas, especificamente a \textit{PKCS \#10} \cite{pkcs10}, cujo objetivo é padronizar os dados contidos em \textit{certificados digitais}, assim como definir quais tipos de informações devem estar contidas em um \textit{certificado digital} e o modelo que deve ser seguido para se requisitar um. O certificado é construído como se observa na Figura~\ref{fig:img06}:
 
-	\begin{figure}[h]
+	\begin{figure}[!ht]
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.46]{figuras/img05.eps}
 		\caption{Certificado de Chave Pública em Uso \cite[p.~430]{stallings11}}
@@ -149,7 +149,7 @@
 		\centering
 		\includegraphics[keepaspectratio=true,scale=0.7]{figuras/img04.eps}
 		\caption{Certificado X.509 \cite[p.~431]{stallings11}}
-		\label{img07}
+		\label{fig:img07}
 	\end{figure}
 
 	E esses certificados \textit{X.509} podem ainda se mostrar de duas formas, em formato \textbf{DER} ou \textbf{PEM}. Quando se encontram em codificação \textit{DER} (\textit{Distinguished Encoding Rules}), esses certificados se apresentam em formato binário, legíveis apenas através dos devidos interpretadores por parte da máquina. Por outro lado, os \textit{PEM} (\textit{Privacy Enhanced Mail}) usam codificação \textbf{ASCII}, facilitando sua interpretação e leitura, assim como a distinção das informações contidas em seu corpo.
@@ -167,13 +167,33 @@
 
 	Entretanto, esses certificados também podem apresentar erros, ou falhas, e comprometer a confiabilidade da troca de informações por diversos fatores, que podem acarretar em quebras de segurança, esses erros são explicitados através de verificações realizadas por ferramentas de geração e análise de certificados digitais (entre outras funções). No Anexo~\ref{tab:erros} vemos os erros identificáveis através da ferrammenta \textbf{OpenSSL}. 
 
-	Cada um desses retornos (\textit{com excessão do caso zero}) envolve uma vulnerabilidade de segurança, e se não tratados, certificados que apresentam essas falhas podem representar brechas de segurança. Notemos os Erros 02, 10, 18, e 20.
+	Cada um desses retornos (\textit{com excessão do caso zero}) envolve uma vulnerabilidade de segurança, e se não tratados, certificados que apresentam essas falhas podem representar brechas de segurança. Notemos os Erros 02, 10, 18, 20 e 23.
 
 	O retorno \textbf{02 - unable to get issuer certificate} caracteriza que um ou mais certificados da cadeia não puderam ser encontrados, ou acessados, e por essa razão, não é possível atestar que aquele certificado foi realmente emitido por aquela autoridade. Se não for possível atestar o emissor de um certificado, não é possível admitir a identidade do indivíduo certificado, abrindo uma brecha na confiabilidade.
 
-	Já o retorno \textbf{10 - certificate has expired} determina que a data de validade do certificado já expirou, e por essa razão o certificado não deve ser considerado válido em datas posteriores. A partir daquela data, não é possível distinguir o real portador daquelas informações, a não ser que o certificado seja renovado.
+	Já o retorno \textbf{10 - certificate has expired} determina que a data de validade do certificado já expirou, e por essa razão o certificado não deve ser considerado válido em datas posteriores. Isso pode ocorrer para a proteção da chave privada, ou por motivos corporativos. O que importa é que a partir daquela data, não é possível atestar o real portador daquelas informações, a não ser que o certificado seja renovado.
 
-	No retorno \textbf{18 - self signed certificate} vemos um certificado auto-assinado. Essa situação deveria ser comum, caso o certificado em questão fosse emitido por uma autoridade certificadora do topo de sua cadeia de certificação; entretanto, essa situação não deve ocorrer em outros casos, pois não existe uma relação de confiança para atestar a identidade do indivíduo, a não ser que aquele certificado já fosse conhecido. Qualquer um, nesse caso, poderia se passar por outro indivíduo, ou mesmo se passar por uma autoridade certificadora, na falta de referências.
+	No retorno \textbf{18 - self signed certificate} vemos um certificado auto-assinado. Este não é necessariamente um erro, como os outros. Essa situação é comum caso o certificado em questão fosse emitido para uma raíz de certificação. Também é normal encontrar certificados auto-assinados em ambientes como PGP (Pretty Good Privacy), cujo funcionamento se baseia em \textit{redes de confiança}, e nesses casos toda a comunicação segue um padrão de mensagens OpenPGP~\cite{PGP}.
+
+	Entretanto, essa situação não deve ocorrer em outros casos, pois não existe uma relação de confiança para atestar a identidade do indivíduo, a não ser que aquele certificado já fosse conhecido. Qualquer um, nesse caso, poderia se passar por outro indivíduo, ou mesmo se passar por uma autoridade certificadora, na falta de referências.
 
 	E o retorno \textbf{20 - unable to get local issuer certificate} mostra que ao recuperar os certificados, alguns dos certificados de emissores podem não coincidir com o que era esperado, ou não podem ser lidos. Por alguma razão, esses certiificados que deveriam ter sido providos/acessados não estão presentes, impedindo que a verificação siga adiante.
 	Nesse caso, se alcança o mesmo impasse visto no \textbf{retorno 02}.
+
+	O retorno \textbf{23 - revoked certificate} constata um certificado revogado, um certificado que, por uma série de razões não deveria mais estar em circulação. Essas razões, sugeridas na RFC 5280 são~\cite[p.~90]{RFC5280}:
+
+	\begin{itemize}
+		\item Desuso
+		\item Chave Comprometida
+		\item Autoridade Certificadora Comprometida
+		\item Mudança de Afiliação
+		\item Substituído
+		\item Encerramento da Operação
+		\item Certificado Suspenso
+		\item Perda de Privilégios
+		\item Attribute Authority Comprometido
+	\end{itemize}
+
+	Um certificado não necessariamente precisa estar revogado para que ocorra esse retorno, ele pode estar suspenso em caso de suspeita do acontecimento de alguma outra irregularidade. Para que seja de conhecimento público quais certificados foram revogados, existem as CRLs (\textit{Certificate Revogation Lists})~\cite{RFC5280}, que são periodicamente atualizadas pelas autoridades certificadoras.
+
+	Uma vulnerabilidade envolvida nesse contexto é a possibilidade de um certificado revogado ser utilizado antes que a informação das CRLs seja atualizada, impossibilitando a identificação do uso indevido deste certificado, colocando a comunicação em risco.
